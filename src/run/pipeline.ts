@@ -12,6 +12,7 @@ import { loadClaims, type Claim } from "../evidence/claims.js";
 import { SpendCapError, type LlmClient } from "../llm/client.js";
 import { log } from "../log.js";
 import { recordEvent, transition, type State } from "../pipeline/states.js";
+import { loadApprovedWording } from "../evidence/wording.js";
 import { sha256 } from "../pipeline/dedupe.js";
 import { analyzePosting, type PostingAnalysis } from "../suitability/analyze.js";
 import { scoreSuitability, type Preferences, type Weights } from "../suitability/score.js";
@@ -126,6 +127,7 @@ export function dropBelowScoreFloor(db: DB, minScore: number) {
 export const MIN_USABLE_CLAIMS = 5;
 
 export async function draftTop(db: DB, deps: DraftDeps, opts: { maxPerDay: number; minScore: number; onlyId?: number; maxQueue?: number }) {
+  deps = { ...deps, approvedWording: loadApprovedWording(db, deps.claims) };
   // A fresh install has no confirmed claims; drafting from nothing would only produce failures.
   const usable = deps.claims.filter((c) => (c.status === "VERIFIED" || c.status === "USER_CONFIRMED") && c.permitted_use.includes("resume")).length;
   if (usable < MIN_USABLE_CLAIMS) {
@@ -209,6 +211,7 @@ function persistOutcome(db: DB, postingId: number, outcome: Awaited<ReturnType<t
 
 /** Re-drafts postings the user sent back with a revision note. Earlier versions are superseded. */
 export async function redraftRevisions(db: DB, deps: DraftDeps) {
+  deps = { ...deps, approvedWording: loadApprovedWording(db, deps.claims), wordingMode: "prefer" };
   const rows = db
     .prepare(
       `SELECT p.id, p.company_name, p.title, p.description_text, p.analysis_json,

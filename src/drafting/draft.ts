@@ -1,5 +1,6 @@
 import type { Claim } from "../evidence/claims.js";
 import { isUsable, usableClaims } from "../evidence/claims.js";
+import { isApprovedWording, PRONOUN, wordingKey, type ApprovedWording } from "../evidence/wording.js";
 import type { LlmClient } from "../llm/client.js";
 import type { PostingAnalysis } from "../suitability/analyze.js";
 import { validateClaims, type ClaimIssue } from "../validate/claims-validator.js";
@@ -19,6 +20,10 @@ export interface DraftDeps {
   profile: Profile;
   draftModel: string;
   reviewModel: string;
+  /** Bullet wording the user already approved, keyed by claim set (see evidence/wording.ts). */
+  approvedWording?: Map<string, ApprovedWording>;
+  /** enforce (new drafts): approved wording must be reused verbatim. prefer (revisions): reuse it unless the user's note asks for a change; approving the revision replaces it. */
+  wordingMode?: "enforce" | "prefer";
 }
 
 export interface Validation {
@@ -46,7 +51,7 @@ export interface DraftOutcome {
 /** Convention (like edu-/pub- in render.ts): employment and own-company headings cite claims whose id starts with "role-". */
 const isRoleClaim = (id: string) => id.startsWith("role-");
 
-export function structureIssues(d: ResumeDraft, claims: Claim[] = []): string[] {
+export function structureIssues(d: ResumeDraft, claims: Claim[] = [], approved: Map<string, ApprovedWording> = new Map()): string[] {
   const out: string[] = [];
   const projects = d.projects ?? [];
   const entries = [...d.experience, ...projects];
@@ -60,6 +65,18 @@ export function structureIssues(d: ResumeDraft, claims: Claim[] = []): string[] 
   }
   for (const e of projects) {
     if (e.heading_claim_ids.some(isRoleClaim)) out.push(`"${e.heading}" is under Projects but cites a role- claim; employment belongs under Experience`);
+  }
+  // Resume voice rule: fragments, no pronouns. Deterministic, so it does not depend on the voice review noticing.
+  for (const b of resumeBlocks(d)) {
+    const m = b.text.match(PRONOUN);
+    if (m) out.push(`pronoun "${m[0]}" in "${b.text.slice(0, 80)}"; resume text uses no pronouns`);
+  }
+  // Approved wording is reused verbatim: the user reviews a sentence once.
+  for (const e of entries) {
+    for (const b of e.bullets) {
+      const a = approved.get(wordingKey(b.claim_ids));
+      if (a && !isApprovedWording(b.text, b.claim_ids, approved)) out.push(`bullet citing [${a.claimIds.join(", ")}] has approved wording; use it exactly: "${a.text}"`);
+    }
   }
   const cited = new Set(resumeBlocks(d).flatMap((b) => b.claim_ids));
   for (const c of claims) {
@@ -82,7 +99,7 @@ export async function validateResume(d: ResumeDraft, deps: DraftDeps, postingTex
   const rendered = renderResume(d, deps.profile, deps.claims);
   const claimIssues = validateClaims(resumeBlocks(d), deps.claims, "resume", { techTerms: deps.techTerms, postingText });
   const lintResult = lint(resumeBlocks(d).map((b) => b.text).join("\n"), deps.banned);
-  const structure = structureIssues(d, deps.claims);
+  const structure = structureIssues(d, deps.claims, deps.wordingMode === "prefer" ? undefined : deps.approvedWording);
   let voice: VoiceReview | undefined;
   // Voice review is a model call: only spend it once the deterministic checks pass.
   if (!claimIssues.length && !lintResult.length) {
@@ -123,7 +140,7 @@ export async function draftResume(
       purpose: attempt === 1 ? "draft_resume" : "draft_resume_retry",
       model: deps.draftModel,
       system,
-      user: resumeUser(claims, posting, analysis, feedback),
+      user: resumeUser(claims, posting, analysis, feedback, [...(deps.approvedWording?.values() ?? [])], deps.wordingMode ?? "enforce"),
       schema: ResumeDraftSchema,
       maxTokens: 6000,
       effort: "medium",

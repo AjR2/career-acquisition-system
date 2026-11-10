@@ -10,6 +10,7 @@ import { assistedSubmit, AuthorizationError } from "../apply/submit.js";
 import type { EligibilityResult } from "../eligibility/rules.js";
 import type { Suitability } from "../suitability/score.js";
 import type { ResumeDraft } from "../drafting/schemas.js";
+import { isApprovedWording, loadApprovedWording } from "../evidence/wording.js";
 import { log } from "../log.js";
 import type { State } from "../pipeline/states.js";
 import { esc, page } from "./html.js";
@@ -96,6 +97,14 @@ export function startServer(deps: UiDeps, port: number, host = "127.0.0.1") {
     const draft = m ? (JSON.parse(m.content_json) as ResumeDraft) : null;
     const cited = draft ? [...new Set([...draft.summary, ...[...draft.experience, ...(draft.projects ?? [])].flatMap((x) => x.bullets), draft.skills].flatMap((b) => b.claim_ids).concat([...draft.experience, ...(draft.projects ?? [])].flatMap((x) => x.heading_claim_ids)))] : [];
     const claimById = new Map(ctx.claims.map((c) => [c.id, c]));
+    // Only lines the user has not approved before need reading; the rest reuse approved wording.
+    const wording = loadApprovedWording(db, ctx.claims);
+    const bullets = draft ? [...draft.experience, ...(draft.projects ?? [])].flatMap((e) => e.bullets) : [];
+    const freshLines = draft ? [...draft.summary.map((b) => b.text), ...bullets.filter((b) => !isApprovedWording(b.text, b.claim_ids, wording)).map((b) => b.text)] : [];
+    const reusedCount = bullets.length - (freshLines.length - (draft?.summary.length ?? 0));
+    const reviewCard = draft
+      ? `<div class="card"><h3>New wording to review (${freshLines.length})</h3><p class="muted">${reusedCount} bullet(s) reuse wording you already approved. Approving this resume approves its bullets for reuse.</p><ul>${freshLines.map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>`
+      : "";
     const state = String(p.state) as State;
 
     const facts = `<table>
@@ -148,6 +157,7 @@ export function startServer(deps: UiDeps, port: number, host = "127.0.0.1") {
       ${actions.join("")}
       <div class="card"><h3>Facts</h3>${facts}</div>
       ${s ? `<div class="card"><h3>Suitability ${Math.round(s.score * 100)}/100</h3><pre>${esc(s.explanation)}</pre></div>` : ""}
+      ${reviewCard}
       ${m ? `<div class="card"><h3>Resume (version ${m.version})</h3><div class="resume">${resumeHtml(m.rendered_md).replace(/^[\s\S]*<body>|<\/body>[\s\S]*$/g, "")}</div></div>` : ""}
       ${cited.length ? `<div class="card"><h3>Claims this resume relies on</h3><table>${cited.map((c) => `<tr><td><code>${esc(c)}</code></td><td>${esc(claimById.get(c)?.status)}</td><td>${esc(claimById.get(c)?.claim_text)}</td></tr>`).join("")}</table></div>` : ""}
       ${plan.known ? `<div class="card"><h3>Application form plan</h3><table>${plan.items.map((i) => `<tr><td>${i.required ? "*" : ""} ${esc(i.label)}</td><td><span class="tag">${esc(i.source)}</span></td><td class="muted">${esc(i.value ?? i.reason ?? "")}</td></tr>`).join("")}</table>

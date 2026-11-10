@@ -6,6 +6,7 @@ import type { ApplicationQuestion } from "../discovery/types.js";
 import type { Profile } from "../drafting/render.js";
 import { resumeBlocks, type ResumeDraft } from "../drafting/schemas.js";
 import type { Claim } from "../evidence/claims.js";
+import { saveApprovedWording } from "../evidence/wording.js";
 import { sha256 } from "../pipeline/dedupe.js";
 import { transition, type State } from "../pipeline/states.js";
 import { validateClaims } from "../validate/claims-validator.js";
@@ -89,6 +90,8 @@ export function approve(db: DB, postingId: number, ctx: DecisionContext, userAns
   return db.transaction(() => {
     const id = record(db, { postingId, decision: "approve", materialId: m.id, materialHash: m.content_hash, claimsHash: claimsHash(ctx.claimsFile), answers: cleaned });
     db.prepare("UPDATE materials SET status = 'approved' WHERE id = ?").run(m.id);
+    // Approving a resume also approves its bullet wording for reuse in later drafts.
+    saveApprovedWording(db, JSON.parse(m.content_json) as ResumeDraft, ctx.claims, postingId);
     transition(db, postingId, "APPROVED", "user", { decisionId: id, materialHash: m.content_hash });
     return id;
   })();

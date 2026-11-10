@@ -1,4 +1,5 @@
 import type { Claim } from "../evidence/claims.js";
+import type { ApprovedWording } from "../evidence/wording.js";
 import { asData, UNTRUSTED_NOTICE } from "../llm/client.js";
 import type { PostingAnalysis } from "../suitability/analyze.js";
 
@@ -21,6 +22,7 @@ HARD RULES (a draft that breaks any of these is rejected automatically):
 8. NOTE text on a claim is guidance for you. Never copy NOTE wording into the resume.
 9. SECTIONS: "experience" holds only employment and the candidate's own company; each heading cites a claim whose ID starts with "role-". Self-built tools and side work go in "projects", never in "experience".
 10. Claims marked [REQUIRED] must be cited somewhere on every resume.
+11. When APPROVED WORDING is given for a set of claim IDs, a bullet citing exactly that set uses the approved text unchanged.
 
 HEADINGS: "Title | Organization | Mon YYYY – Present" (or "YYYY – YYYY"), title case, an en dash between dates. Projects: "Project name | Mon YYYY – Present".
 
@@ -30,7 +32,7 @@ VOICE PROFILE (follow section 1 strictly):
 ${voiceProfile}`;
 }
 
-export function resumeUser(claims: Claim[], posting: { company: string; title: string; text: string }, analysis: PostingAnalysis | null, feedback?: string): string {
+export function resumeUser(claims: Claim[], posting: { company: string; title: string; text: string }, analysis: PostingAnalysis | null, feedback?: string, approved: ApprovedWording[] = [], mode: "enforce" | "prefer" = "enforce"): string {
   return [
     `Target role: ${posting.title} at ${posting.company}`,
     analysis
@@ -40,6 +42,9 @@ export function resumeUser(claims: Claim[], posting: { company: string; title: s
     "APPROVED CLAIMS (the only facts you may use):",
     claimsBlock(claims),
     "",
+    approved.length
+      ? `\nAPPROVED WORDING (already reviewed by the candidate). ${mode === "enforce" ? "A bullet that cites exactly these claim IDs must use this text verbatim." : "Reuse this text verbatim unless the candidate's change request below asks to change that line."} Choose which to include and their order for this posting; write new wording only for claim sets not listed:\n${approved.map((a) => `- [${a.claimIds.join(", ")}] ${a.text}`).join("\n")}\n`
+      : "",
     asData("posting", posting.text.slice(0, 16000)),
     feedback ? `\nYOUR PREVIOUS DRAFT WAS REJECTED. Fix every problem below and return a complete corrected draft:\n${feedback}` : "",
   ].join("\n");

@@ -179,4 +179,20 @@ CREATE TABLE submissions (
 );
 `,
   },
+  {
+    id: 4,
+    name: "approved_wording",
+    sql: `
+-- Exact text of approved resume bullets, keyed by the sorted set of claim ids each cites. Later drafts
+-- reuse it verbatim. claims_fp fingerprints the cited claims' text; a changed claim makes the entry stale.
+CREATE TABLE approved_wording (
+  key TEXT PRIMARY KEY,
+  text TEXT NOT NULL,
+  claim_ids_json TEXT NOT NULL,
+  claims_fp TEXT NOT NULL,
+  source_posting_id INTEGER, -- provenance only: the posting whose approval set this wording
+  approved_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now'))
+);
+`,
+  },
 ];

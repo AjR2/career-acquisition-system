@@ -145,6 +145,17 @@ describe("resume sections and required claims", () => {
   });
 });
 
+describe("resume pronoun rule", () => {
+  it("a first-person pronoun fails structure; words like IT and AI do not", async () => {
+    const bad = structuredClone(good);
+    bad.experience[1]!.bullets[0]!.text = "Teach computer science for my own school";
+    const out = await draftResume(deps([bad, pass, good, pass]), target, null);
+    expect(out.ok).toBe(true);
+    expect(out.attempts[0]!.validation.structure.join(" ")).toMatch(/pronoun "my"/);
+    expect(out.attempts[1]!.validation.structure).toEqual([]);
+  });
+});
+
 describe("spend cap", () => {
   it("refuses model calls once today's spend reaches the cap", async () => {
     const db = testDb();
