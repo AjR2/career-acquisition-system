@@ -1,0 +1,33 @@
+node_modules/
+dist/
+data/
+.env
+.env.*
+!.env.example
+*.db
+*.db-*
+logs/
+career-evidence/writing-samples/*
+!career-evidence/writing-samples/.gitkeep
+# Personal documents with contact details stay local, never in git history
+career-evidence/profile/resume-*.md
+config/profile.local.yaml
+
+# Personal config. Each is created from its .example file by scripts/setup.sh (see README.md).
+config/eligibility.yaml
+config/target.yaml
+config/preferences.yaml
+config/standard-answers.yaml
+config/companies.yaml
+career-evidence/approved-claims.yaml
+career-evidence/voice-profile.md
+CLAUDE.md
+
+# macOS
+.DS_Store
+
+# Hand-labeled eval set: real postings from the private company list. Eval tests skip without it.
+fixtures/labeled/
+
+# Identity markers for the packaging privacy scan
+scripts/privacy-markers.local

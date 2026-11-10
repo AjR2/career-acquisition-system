@@ -1,0 +1,461 @@
+{
+ "absolute_url": "https://job-boards.greenhouse.io/vercel/jobs/5778418004",
+ "data_compliance": [
+  {
+   "type": "gdpr",
+   "requires_consent": false,
+   "requires_processing_consent": false,
+   "requires_retention_consent": false,
+   "retention_period": null,
+   "demographic_data_consent_applies": false
+  }
+ ],
+ "internal_job_id": 5039984004,
+ "location": {
+  "name": "Hybrid - London, Berlin"
+ },
+ "metadata": [
+  {
+   "id": 18783104004,
+   "name": "Career Site Categories",
+   "value": "Field Engineering",
+   "value_type": "single_select"
+  }
+ ],
+ "id": 5778418004,
+ "updated_at": "2026-10-20T15:51:26-04:00",
+ "requisition_id": "1099",
+ "title": "Forward-Deployed Engineer",
+ "pay_input_ranges": [],
+ "company_name": "Vercel",
+ "first_published": "2026-01-22T11:37:20-05:00",
+ "language": "en",
+ "application_deadline": null,
+ "content": "&lt;div class=&quot;content-intro&quot;&gt;&lt;h2&gt;About Vercel:&lt;/h2&gt;\n&lt;p&gt;&lt;span data-sheets-root=&quot;1&quot;&gt;Vercel is the agentic infrastructure company, freeing people and agents to ship what&#39;s next. For more than a decade we&#39;ve helped builders move from idea to production with speed, security, and exceptional developer experience.&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span data-sheets-root=&quot;1&quot;&gt;Now we&#39;re scaling our products for both agents and people to ship and run software, built in the open and trusted by OpenAI, PayPal, Ramp, Supreme, and millions of developers worldwide.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;h2&gt;About the role&lt;/h2&gt;\n&lt;p&gt;We are looking for a&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;strong&gt;Senior Forward-Deployed Engineer&lt;/strong&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;to join our Professional Services team. This role is focused on working directly alongside developer teams in our most strategic enterprise customers to drive transformational outcomes across frontend modernization, platform migrations, and AI adoption.&lt;/p&gt;\n&lt;p&gt;In this role, you will lead complex Next.js migrations, architect high-performance applications, and build production AI solutions - all within customer environments. You&#39;ll work hands-on-keyboard alongside customer teams, whether you&#39;re migrating a legacy React application to App Router, conducting a deep-dive code audit, or deploying production agents using Vercel&#39;s eve framework and AI SDK.&lt;/p&gt;\n&lt;p&gt;Our Forward-Deployed Engineers operate with high agency and autonomy. You&#39;ll navigate ambiguous enterprise environments, assess technical debt, design migration strategies, and deliver measurable business value - all while building long-term relationships that expand our partnership with each customer.&lt;/p&gt;\n&lt;p&gt;There are two main profiles for this role: Next.js experts, and AI builders. Next.js experts work on deep customer code optimization, performance audits, AEO and SEO, and teaching customers how to build Next.js apps with AI instrumentation - such as Claude Code, Codex, Cursor, etc with Next.js and Vercel agent skills. The AI builder profile is less focused on deep Next.js experience, and more on identifying, evangelizing, and building AI applications and agentic workflows. Your job in this role will be to understand customers\u2019 businesses, scope, design, and build AI agents, and prove their value. The two profiles are not mutually exclusive and we appreciate expertise in both.&lt;/p&gt;\n&lt;p&gt;You will report to the Global Manager of Forward Deployed Engineering. This role is remote-first with travel to customer sites expected occasionally. Travel requirements vary, but most of our engineers travel no more than 3-4 days every other month.&lt;/p&gt;\n&lt;h2&gt;What you&#39;ll do&lt;/h2&gt;\n&lt;ol&gt;\n&lt;li&gt;&lt;strong&gt;Build production AI solutions&lt;/strong&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;using Vercel&#39;s&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;code&gt;eve&lt;/code&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;framework, AI SDK, and AI Cloud infrastructure, including conversational interfaces, production agents, MCP servers, and agentic workflows that transform customer operations.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Lead complex frontend migrations -&lt;/strong&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;modernizing legacy React, Vue, or other frameworks to Next.js, including Pages to App Router transitions, incremental adoption strategies, and large-scale codebase transformations. Automation of migrations is key to engineering efficiency.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Conduct code audits and help analyze and improve website performance&lt;/strong&gt;, analyzing customer codebases for performance bottlenecks, architectural anti-patterns, and optimization opportunities - delivering actionable roadmaps that drive measurable improvements.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Architect and implement high-performance Next.js applications&lt;/strong&gt;, leveraging App Router, Server Components, streaming, ISR, and advanced rendering strategies to meet enterprise scale and performance requirements.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Embed with strategic customers&lt;/strong&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;to build production applications - working within their systems, understanding their constraints, and shipping TypeScript code that goes live.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Drive enablement and knowledge transfer&lt;/strong&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;through workshops, pair programming, and documentation - ensuring customer teams can extend and maintain solutions independently.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Navigate complex enterprise environments&lt;/strong&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;by building relationships with stakeholders across engineering, product, and executive teams - translating technical capabilities into business outcomes.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Contribute to our service evolution&lt;/strong&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;by identifying repeatable patterns, building reusable components, and sharing implementation insights back to Product and Engineering teams.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;h2&gt;What you need&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;6+ years of experience&lt;/strong&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;in software engineering with at least 2 years in a customer-facing technical role (consulting, solutions architecture, forward deployed engineering, or technical founder experience).&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Experience using AI instrumentation&lt;/strong&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;such as harnesses, skills, and MCPs to build and deploy web applications, backend systems, and/or agentic workflows.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;High agency with comfort in ambiguity -&lt;/strong&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;you thrive when given a problem to solve rather than a task to complete, and you can navigate complex organizations to create a plan and drive a project.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Exceptional communication skills&lt;/strong&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;with the ability to conduct technical discovery, present to executives, mentor engineers, and build lasting customer relationships - all with a low-ego, collaborative approach.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Business acumen&lt;/strong&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;to understand customer objectives, translate technical capabilities into ROI, and identify expansion opportunities throughout engagement lifecycles.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Willingness to travel&lt;/strong&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;occasionally to customer sites for embedded work and relationship building.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;Next.js-focused Candidates:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;Expert-level TypeScript skills -&lt;/strong&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;You are fluent in TypeScript and have strong opinions on type safety, patterns, and tooling.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Deep expertise in Next.js&lt;/strong&gt;, with a proven track record of architecting and delivering complex applications using App Router, Server Components, server-side rendering (SSR), static generation (SSG), and incremental static regeneration (ISR), and personalization.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Demonstrated experience leading frontend migrations -&lt;/strong&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;you&#39;ve converted legacy applications to Next.js, navigated incremental adoption strategies, and understand the challenges of migrating large codebases in production environments.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Mastery of React&lt;/strong&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;and its ecosystem, including advanced state management, performance optimization, and modern patterns like streaming, suspense, and concurrent features.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;AI-focused Candidates:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;Production experience with LLMs and AI applications&lt;/strong&gt;, including agent development, cloud sandbox &amp;amp; filesystem agent patterns, human-in-the-loop patterns, and value optimization. Familiarity with Vercel&#39;s eve framework and AI SDK is strongly preferred.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Ability to identify business cases for AI agents&lt;/strong&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp;&lt;/span&gt;- many customers need guidance not only on how to build AI agents, but where and why to use AI. You\u2019ll need to listen and understand a day-in-the-life of customers\u2019 teams to build proposals.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2&gt;Bonus if you&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Have led enterprise AI transformation initiatives, including building production agents that automated manual processes or replaced legacy systems.&lt;/li&gt;\n&lt;li&gt;Have taught others how to develop software using AI, best practices for building agents, harnesses, skills, and MCPs.&lt;/li&gt;\n&lt;li&gt;Have led large-scale migrations from legacy frameworks (Create React App, Gatsby, custom webpack setups) to Next.js in enterprise environments.&lt;/li&gt;\n&lt;li&gt;Have expertise in performance optimization and Core Web Vitals, with experience diagnosing and fixing LCP, CLS, and INP issues at scale.&lt;/li&gt;\n&lt;li&gt;Have contributed to the Next.js, React, or AI SDK open-source projects, or maintain popular related libraries.&lt;/li&gt;\n&lt;li&gt;Have experience with enterprise deployment patterns including security reviews, compliance requirements, and multi-region architectures.&lt;/li&gt;\n&lt;li&gt;Have a background in financial services, healthcare, retail/e-commerce, or media - industries with complex frontend ecosystems and growing AI adoption.&lt;/li&gt;\n&lt;li&gt;Have spoken at conferences or published thought leadership on frontend architecture, migrations, or AI applications.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2&gt;Benefits:&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Great compensation package and stock options.&lt;/li&gt;\n&lt;li&gt;Inclusive Healthcare Package.&lt;/li&gt;\n&lt;li&gt;Learn and Grow - we provide mentorship and send you to events that help you build your network and skills.&lt;/li&gt;\n&lt;li&gt;Flexible Time Off - Flexible vacation policy with a recommended 4-weeks per year, and paid holidays.&lt;/li&gt;\n&lt;li&gt;Remote Friendly - Work with teammates from different time zones across the globe.&lt;/li&gt;\n&lt;li&gt;We will provide you the gear you need to do your role, and a WFH budget for you to outfit your space as needed.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n&lt;div id=&quot;te-floating-button-container&quot;&gt;&lt;/div&gt;&lt;div class=&quot;content-conclusion&quot;&gt;&lt;h2&gt;&lt;strong&gt;Disclosures:&lt;/strong&gt;&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;Privacy: &lt;/strong&gt;Please review our &lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;a href=&quot;https://vercel.com/legal/job-applicant-privacy-notice&quot;&gt;Job Applicant Privacy Policy&lt;/a&gt;&lt;/span&gt; for more information on how we handle your data.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Equal Opportunity:&amp;nbsp;&lt;/strong&gt;Vercel is committed to fostering and empowering an inclusive community within our organization. We do not discriminate on the basis of race, religion, color, gender expression or identity, sexual orientation, national origin, citizenship, age, marital status, veteran status, disability status, or any other characteristic protected by law. Vercel encourages everyone to apply for our available positions, even if they don&#39;t necessarily check every box on the job description.&lt;/li&gt;\n&lt;/ul&gt;&lt;/div&gt;",
+ "departments": [
+  {
+   "id": 4147568004,
+   "name": "Professional Services",
+   "child_ids": [],
+   "parent_id": null
+  }
+ ],
+ "offices": [
+  {
+   "id": 4014161004,
+   "name": "EMEA",
+   "location": "EMEA",
+   "child_ids": [
+    4035415004,
+    4035435004,
+    4035434004,
+    4035416004,
+    4091068004,
+    4091069004
+   ],
+   "parent_id": null
+  }
+ ],
+ "ai_disclaimer": null,
+ "include_ai_disclaimer": null,
+ "ai_opt_out_request_url": "http://app4.greenhouse.io/ai_opt_out_request/job_post/5778418004/ai_opt_out",
+ "compliance": null,
+ "demographic_questions": null,
+ "questions": [
+  {
+   "description": null,
+   "label": "First Name",
+   "required": true,
+   "fields": [
+    {
+     "name": "first_name",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Last Name",
+   "required": true,
+   "fields": [
+    {
+     "name": "last_name",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Email",
+   "required": true,
+   "fields": [
+    {
+     "name": "email",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Phone",
+   "required": true,
+   "fields": [
+    {
+     "name": "phone",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Resume/CV",
+   "required": false,
+   "fields": [
+    {
+     "name": "resume",
+     "type": "input_file",
+     "values": []
+    },
+    {
+     "name": "resume_text",
+     "type": "textarea",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Cover Letter",
+   "required": false,
+   "fields": [
+    {
+     "name": "cover_letter",
+     "type": "input_file",
+     "values": []
+    },
+    {
+     "name": "cover_letter_text",
+     "type": "textarea",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Are you currently based in any of these countries? Please note these are the only countries where we are accepting applications",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_15208831004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "United States",
+       "value": 57739480004
+      },
+      {
+       "label": "Germany",
+       "value": 57739481004
+      },
+      {
+       "label": "United Kingdom",
+       "value": 57739482004
+      },
+      {
+       "label": "Argentina",
+       "value": 57739483004
+      },
+      {
+       "label": "Australia",
+       "value": 57739484004
+      },
+      {
+       "label": "Canada",
+       "value": 57739485004
+      },
+      {
+       "label": "India",
+       "value": 57739486004
+      },
+      {
+       "label": "Japan",
+       "value": 57739487004
+      },
+      {
+       "label": "Other",
+       "value": 57739488004
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": "<p>Please mark '<strong>YES</strong>' if you will require Visa Sponsorship now, or in the future.<br>Mark '<strong>NO</strong>' if you will <strong>NOT</strong> require Visa Sponsorship now, or in the future.</p>",
+   "label": "Will you require Visa Sponsorship now, or in the future?",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_15208832004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "Yes",
+       "value": 1
+      },
+      {
+       "label": "No",
+       "value": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Your authorization to work in the country where you live. Please choose the option that describes your work authorization.\n",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_15208833004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "I am authorized to work in the country due to my nationality",
+       "value": 57739489004
+      },
+      {
+       "label": "I am authorized to work in the country based on a valid work permit and do not need a company to sponsor my visa",
+       "value": 57739490004
+      },
+      {
+       "label": "I am authorized to work in the country based on a valid work permit which needs to be sponsored by the company I work for",
+       "value": 57739491004
+      },
+      {
+       "label": "I am not authorized to work in the country and need visa support",
+       "value": 57739492004
+      },
+      {
+       "label": "Other",
+       "value": 57739493004
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": "<p>Please mark &lsquo;<strong>YES</strong>&rsquo; if you <span style=\"text-decoration: underline;\">currently live</span> in one of these states.<br>If you do <strong>NOT</strong> currently live in one of these states, mark &lsquo;<strong>NO</strong>.&rsquo;</p>",
+   "label": "Do you live in one of the following states?\nAlabama, Alaska, Delaware, Kansas, Maine, Mississippi, Montana, Nebraska, New Mexico, North Dakota, South Dakota, West Virginia, or Wyoming.",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_15208834004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "Yes",
+       "value": 1
+      },
+      {
+       "label": "No",
+       "value": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "LinkedIn Profile",
+   "required": false,
+   "fields": [
+    {
+     "name": "question_15208835004",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Twitter",
+   "required": false,
+   "fields": [
+    {
+     "name": "question_15208836004",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Github",
+   "required": false,
+   "fields": [
+    {
+     "name": "question_15208837004",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Website",
+   "required": false,
+   "fields": [
+    {
+     "name": "question_15208838004",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": "<p><span style=\"font-weight: 400;\">By submitting my application, I acknowledge that I have read and understand Vercel&rsquo;s </span><a href=\"https://vercel.com/legal/job-applicant-privacy-notice\"><span style=\"font-weight: 400;\">Job Applicant Privacy Notice</span></a><span style=\"font-weight: 400;\">.</span><span style=\"font-weight: 400;\">&nbsp;</span></p>",
+   "label": "By submitting my application, I acknowledge that I have read and understand Vercel\u2019s Job Applicant Privacy Notice - https://vercel.com/legal/job-applicant-privacy-notice ",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_15208839004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "Acknowledge/Confirm",
+       "value": 57739494004
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Please double-check all the information provided above. Ensuring accuracy is crucial, as any errors or omissions may impact the review of your application.",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_15208840004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "I have reviewed and confirmed that all the information provided is accurate and complete.",
+       "value": 57739495004
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": "<p>If multiple things played a part, tell us about the very first one.</p>",
+   "label": "Where did you first hear about this role?",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_17703278004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "Events",
+       "value": 79904454004
+      },
+      {
+       "label": "Built In",
+       "value": 79904458004
+      },
+      {
+       "label": "LinkedIn",
+       "value": 79904465004
+      },
+      {
+       "label": "Google Search",
+       "value": 79904469004
+      },
+      {
+       "label": "Advertisements",
+       "value": 79904472004
+      },
+      {
+       "label": "Other job boards",
+       "value": 79904473004
+      },
+      {
+       "label": "LLMs (ChatGPT, etc.)",
+       "value": 79904475004
+      },
+      {
+       "label": "I'm a Vercel customer",
+       "value": 79904478004
+      },
+      {
+       "label": "Referral from a Vercel customer",
+       "value": 79904484004
+      },
+      {
+       "label": "Referral from a Vercel team member",
+       "value": 79904487004
+      },
+      {
+       "label": "Social media (X, Instagram, YouTube, etc.)",
+       "value": 79904492004
+      },
+      {
+       "label": "Other Content (news articles, podcasts, blogs)",
+       "value": 79904496004
+      },
+      {
+       "label": "Developer communities (GitHub, Hacker News, Reddit, etc.)",
+       "value": 79904500004
+      },
+      {
+       "label": "Other",
+       "value": 79904501004
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "location_questions": [
+  {
+   "description": null,
+   "label": "Longitude",
+   "required": true,
+   "fields": [
+    {
+     "name": "longitude",
+     "type": "input_hidden",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Latitude",
+   "required": true,
+   "fields": [
+    {
+     "name": "latitude",
+     "type": "input_hidden",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Location",
+   "required": true,
+   "fields": [
+    {
+     "name": "location",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  }
+ ]
+}

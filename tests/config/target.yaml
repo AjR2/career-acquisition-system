@@ -1,0 +1,55 @@
+# TEST FIXTURE: frozen copy used by the test suite.
+version: 1
+goal_label: AI product engineering
+role_description: "AI-native software engineering: building products and features on top of LLMs, full-stack and product engineering, forward-deployed engineering."
+skills_label: Technical
+focus_categories:
+  - id: ai_application
+    description: builds AI/LLM-powered products or features
+    fit: 1
+    growth: 1
+  - id: product_engineering
+    description: general product or full-stack engineering
+    fit: 0.9
+    growth: 0.85
+  - id: forward_deployed
+    description: customer-facing engineering that deploys the product for clients
+    fit: 0.8
+    growth: 0.8
+  - id: infrastructure
+    description: platform, infrastructure, systems, or reliability engineering
+    fit: 0.45
+    growth: 0.5
+  - id: data
+    description: data engineering, analytics, or data pipelines
+    fit: 0.3
+    growth: 0.35
+  - id: security
+    description: security engineering
+    fit: 0.25
+    growth: 0.3
+  - id: ml_research
+    description: ML research or model training
+    fit: 0.15
+    growth: 0.3
+  - id: other
+    description: anything else
+    fit: 0.4
+    growth: 0.4
+team_fit:
+  label: AI-native
+  signal_description: the team builds AI/LLM products or uses AI coding agents in its own engineering
+off_target_core: training or researching ML models rather than building products on them
+experience:
+  preferred_seniority: mid
+  years: 3
+extra_skill_synonyms:
+  - LLM
+  - agents
+  - AI agents
+  - Node.js
+  - SQL
+  - REST
+  - APIs
+  - AI
+role_honesty_note: "Describe their real role: specifying, architecting, directing agents, testing, deploying, operating."

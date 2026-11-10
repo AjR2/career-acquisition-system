@@ -1,0 +1,55 @@
+# Starter list: healthcare employers that hire clinicians and care staff and post jobs on public
+# Greenhouse, Lever, or Ashby boards. Every board was checked live on 2026-10-26; "open" = all open
+# postings at that time (clinical and non-clinical). Hospitals and large health systems mostly use
+# Workday, iCIMS, or Taleo, which CAS cannot read; add employers here or with the setup page.
+# priority: A = watch closely; B = less likely fit. The eligibility rules do the real filtering.
+
+companies:
+  - { name: "Aledade", ats: lever, token: aledade, priority: A, note: "open 47 on 2026-10-26" }
+  - { name: "Amwell", ats: greenhouse, token: amwell, priority: A, note: "open 8 on 2026-10-26" }
+  - { name: "Bicycle Health", ats: greenhouse, token: bicyclehealth, priority: A, note: "open 10 on 2026-10-26" }
+  - { name: "Boulder Care", ats: greenhouse, token: bouldercare, priority: A, note: "open 18 on 2026-10-26" }
+  - { name: "Brave Health", ats: ashby, token: bravehealth, priority: A, note: "open 72 on 2026-10-26" }
+  - { name: "Charlie Health", ats: greenhouse, token: charliehealth, priority: A, note: "open 256 on 2026-10-26" }
+  - { name: "Cohere Health", ats: greenhouse, token: coherehealth, priority: A, note: "open 71 on 2026-10-26" }
+  - { name: "Color Health", ats: ashby, token: color-health, priority: A, note: "open 17 on 2026-10-26" }
+  - { name: "Daybreak Health", ats: greenhouse, token: daybreakhealth, priority: A, note: "open 35 on 2026-10-26" }
+  - { name: "Elation Health", ats: greenhouse, token: elationhealth, priority: A, note: "open 17 on 2026-10-26" }
+  - { name: "Equip Health", ats: ashby, token: equip, priority: A, note: "open 59 on 2026-10-26" }
+  - { name: "Everlywell", ats: lever, token: everlywell, priority: A, note: "open 14 on 2026-10-26" }
+  - { name: "Flatiron Health", ats: greenhouse, token: flatironhealth, priority: A, note: "open 23 on 2026-10-26" }
+  - { name: "Folx Health", ats: greenhouse, token: folxhealth, priority: A, note: "open 10 on 2026-10-26" }
+  - { name: "Freenome", ats: greenhouse, token: freenome, priority: A, note: "open 31 on 2026-10-26" }
+  - { name: "Garner Health", ats: greenhouse, token: garnerhealth, priority: A, note: "open 75 on 2026-10-26" }
+  - { name: "Grow Therapy", ats: ashby, token: grow-therapy, priority: A, note: "open 25 on 2026-10-26" }
+  - { name: "Headway", ats: ashby, token: headway, priority: A, note: "open 94 on 2026-10-26" }
+  - { name: "Hims & Hers", ats: ashby, token: hims-and-hers, priority: A, note: "open 148 on 2026-10-26" }
+  - { name: "Hinge Health", ats: ashby, token: hinge-health, priority: A, note: "open 76 on 2026-10-26" }
+  - { name: "Honor", ats: greenhouse, token: honor, priority: A, note: "open 14 on 2026-10-26" }
+  - { name: "Included Health", ats: lever, token: includedhealth, priority: A, note: "open 48 on 2026-10-26" }
+  - { name: "Interwell Health", ats: greenhouse, token: interwellhealth, priority: A, note: "open 11 on 2026-10-26" }
+  - { name: "Komodo Health", ats: greenhouse, token: komodohealth, priority: A, note: "open 24 on 2026-10-26" }
+  - { name: "Lyra Health", ats: lever, token: lyrahealth, priority: A, note: "open 478 on 2026-10-26" }
+  - { name: "Maven Clinic", ats: greenhouse, token: mavenclinic, priority: A, note: "open 30 on 2026-10-26" }
+  - { name: "Midi Health", ats: greenhouse, token: midihealth, priority: A, note: "open 54 on 2026-10-26" }
+  - { name: "Natera", ats: greenhouse, token: natera, priority: A, note: "open 221 on 2026-10-26" }
+  - { name: "Neko Health", ats: ashby, token: neko-health, priority: A, note: "open 135 on 2026-10-26" }
+  - { name: "Nomi Health", ats: lever, token: nomihealth, priority: A, note: "open 6 on 2026-10-26" }
+  - { name: "Omada Health", ats: greenhouse, token: omadahealth, priority: A, note: "open 20 on 2026-10-26" }
+  - { name: "One Medical", ats: greenhouse, token: onemedical, priority: A, note: "open 393 on 2026-10-26" }
+  - { name: "Ophelia", ats: greenhouse, token: ophelia, priority: A, note: "open 16 on 2026-10-26" }
+  - { name: "Oscar Health", ats: greenhouse, token: oscar, priority: A, note: "open 226 on 2026-10-26" }
+  - { name: "Oula Health", ats: greenhouse, token: oulahealth, priority: A, note: "open 12 on 2026-10-26" }
+  - { name: "Parsley Health", ats: greenhouse, token: parsleyhealth, priority: A, note: "open 9 on 2026-10-26" }
+  - { name: "Pomelo Care", ats: ashby, token: pomelo-care, priority: A, note: "open 83 on 2026-10-26" }
+  - { name: "Prenuvo", ats: greenhouse, token: prenuvo, priority: A, note: "open 68 on 2026-10-26" }
+  - { name: "Ro", ats: lever, token: ro, priority: A, note: "open 50 on 2026-10-26" }
+  - { name: "Rula Health", ats: ashby, token: rula, priority: A, note: "open 36 on 2026-10-26" }
+  - { name: "Strive Health", ats: greenhouse, token: strivehealth, priority: A, note: "open 49 on 2026-10-26" }
+  - { name: "Sword Health", ats: greenhouse, token: swordhealth, priority: A, note: "open 58 on 2026-10-26" }
+  - { name: "Talkspace", ats: greenhouse, token: talkspace, priority: A, note: "open 24 on 2026-10-26" }
+  - { name: "Tia", ats: greenhouse, token: tia, priority: A, note: "open 32 on 2026-10-26" }
+  - { name: "Two Chairs", ats: greenhouse, token: twochairs, priority: A, note: "open 38 on 2026-10-26" }
+  - { name: "Virta Health", ats: ashby, token: virtahealth, priority: A, note: "open 25 on 2026-10-26" }
+  - { name: "Workit Health", ats: greenhouse, token: workithealth, priority: A, note: "open 7 on 2026-10-26" }
+  - { name: "Zocdoc", ats: greenhouse, token: zocdoc, priority: A, note: "open 62 on 2026-10-26" }

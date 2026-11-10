@@ -1,0 +1,7 @@
+# Copy to config/profile.local.yaml (git-ignored). Used for the resume header and form autofill.
+name: "Your Name"
+location: "City, ST"
+email: "you@example.com"
+phone: "(000) 000-0000"
+linkedin: "https://www.linkedin.com/in/you/"
+github: "https://github.com/you"

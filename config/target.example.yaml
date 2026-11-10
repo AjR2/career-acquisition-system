@@ -1,0 +1,15 @@
+# Job target. Run `npm run cas -- setup-target` to fill this in by answering questions.
+version: 1
+goal_label: "your target field"
+role_description: "One or two sentences describing the work you want."
+skills_label: Skills
+focus_categories:
+  - { id: core, description: "the work you want most", fit: 1, growth: 1 }
+  - { id: adjacent, description: "related roles you would also take", fit: 0.7, growth: 0.6 }
+  - { id: off_target, description: "work you do not want", fit: 0.15, growth: 0.2 }
+  - { id: other, description: "anything else", fit: 0.4, growth: 0.4 }
+team_fit: { label: "Team fit", signal_description: "the team works the way you want (describe it)" }
+off_target_core: "work outside your target field"
+experience: { preferred_seniority: mid, years: 3 }
+extra_skill_synonyms: []
+role_honesty_note: "Describe the candidate's real role and responsibilities accurately."

@@ -1,0 +1,15 @@
+# Technologies the claim validator checks. Any of these named in a factual sentence must appear
+# in the cited claims. Matching is case-insensitive on word boundaries.
+terms: [
+  TypeScript, JavaScript, Node, Node.js, Python, "C#", Unity, Java, Go, Golang, Rust, Ruby, Kotlin, Swift, Scala, "C++",
+  React, Next.js, Vue, Angular, Svelte, Express, FastAPI, Django, Flask, Rails, Spring, GraphQL, tRPC,
+  SQLite, Postgres, PostgreSQL, pgvector, MySQL, Redis, MongoDB, DynamoDB, Snowflake, BigQuery, Elasticsearch, Kafka,
+  Docker, Kubernetes, Terraform, AWS, GCP, Azure, Lambda, Vercel, Render, Cloudflare, Tailscale, launchd,
+  Playwright, Puppeteer, Selenium, Cypress, Jest, Vitest,
+  PyTorch, TensorFlow, JAX, "scikit-learn", Hugging Face, LangChain, LlamaIndex, RAG, fine-tuning, embeddings, vector database,
+  OpenAI, Claude, Anthropic, Grok, Gemini, GPT-4, Mistral, Llama, whisper.cpp, MCP, Claude Code, Codex, Cursor, Copilot,
+  NASA-TLX, Figma, AR, VR, XR, WebAR,
+  # Healthcare: licenses, certifications, and clinical systems. Drafts may name these only if a confirmed claim does.
+  RN, LPN, LVN, CNA, NP, FNP, PA-C, BSN, MSN, DNP, BLS, ACLS, PALS, NRP, TNCC, CCRN, CEN, CPR,
+  Epic, Cerner, Meditech, athenahealth, eClinicalWorks, EHR, EMR, HIPAA, ICD-10, CPT, phlebotomy, telehealth
+]

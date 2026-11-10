@@ -1,0 +1,50 @@
+# EXAMPLE ONLY. Do not copy these into approved-claims.yaml: they are fictional.
+# Your real file is career-evidence/approved-claims.yaml. Only VERIFIED and USER_CONFIRMED claims
+# can appear as facts in anything CAS drafts. Drafting needs at least 5 claims permitted for resumes.
+#
+# Conventions:
+#   - ids are lowercase-with-dashes and unique.
+#   - "edu-*" and "pub-*" claims are printed verbatim in the resume's Education & Research section.
+#   - Put every technology you are willing to be asked about in one "technical-skills" claim.
+#   - Every number and technology in a draft must appear in the claims it cites, so write claims
+#     with the exact numbers you can back up.
+#
+# status: VERIFIED (evidence you can show) | USER_CONFIRMED (you confirmed it) | UNVERIFIED | PROHIBITED
+# permitted_use: resume, cover_letter, application_answer, recruiter_message, interview_prep
+
+claims:
+  - id: edu-ms-cs
+    claim_text: "M.S. in Computer Science, Example University, 2020."
+    evidence: "Diploma."
+    source_location: "resume"
+    status: USER_CONFIRMED
+    dates: "2020"
+    permitted_use: [resume, cover_letter, application_answer, interview_prep]
+  - id: role-example-engineer
+    claim_text: "Software Engineer, Example Corp, 2021 to present."
+    evidence: "Resume."
+    source_location: "resume"
+    status: USER_CONFIRMED
+    dates: "2021-present"
+    permitted_use: [resume, cover_letter, application_answer, interview_prep]
+  - id: project-example-pipeline
+    claim_text: "Built a TypeScript service that processes 2 million events a day with 99.9% uptime."
+    evidence: "Dashboard screenshot."
+    source_location: "portfolio"
+    status: VERIFIED
+    dates: "2024"
+    permitted_use: [resume, cover_letter, application_answer, interview_prep]
+  - id: technical-skills
+    claim_text: "Languages: TypeScript, Python. Data: Postgres, SQLite. AI: Claude API."
+    evidence: "Resume skills list."
+    source_location: "resume"
+    status: USER_CONFIRMED
+    dates: "2026"
+    permitted_use: [resume, application_answer, interview_prep]
+  - id: no-hand-written-code
+    claim_text: "Any statement that I hand-wrote code that a coding agent generated."
+    evidence: "Policy."
+    source_location: "policy"
+    status: PROHIBITED
+    dates: always
+    permitted_use: []

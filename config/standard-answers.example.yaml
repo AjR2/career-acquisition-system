@@ -1,0 +1,71 @@
+# Standard answers for recurring application questions. EDIT THIS FILE.
+# Set status: USER_CONFIRMED only for answers you approve for automatic filling.
+# PENDING answers are never used; forms needing them wait for you.
+# Never put EEO / demographic answers here: CAS never answers those.
+
+work_authorization:
+  question: "Are you legally authorized to work in the United States?"
+  answer: "Yes"
+  status: PENDING
+
+sponsorship:
+  question: "Will you now or in the future require visa sponsorship?"
+  answer: "No"
+  status: PENDING
+
+location:
+  question: "Where are you located?"
+  answer: "Your City, ST"
+  status: PENDING
+
+relocation:
+  question: "Are you willing to relocate?"
+  answer: "No"
+  status: PENDING
+
+hybrid_onsite:
+  question: "Are you able to work hybrid or on-site?"
+  answer: "Yes, within the <your metro> area."
+  note: "Conditional answers are never shortened to a bare Yes on Yes/No questions; those go to you."
+  status: PENDING
+
+active_clearance:
+  question: "Do you currently hold an active security clearance?"
+  answer: "No"
+  status: PENDING
+
+clearance_willingness:
+  question: "Are you willing and able to obtain a security clearance?"
+  answer: "Yes"
+  status: PENDING
+
+age_18_plus:
+  question: "Are you at least 18 years old?"
+  answer: "Yes"
+  status: PENDING
+
+links:
+  linkedin: "https://www.linkedin.com/in/your-profile/"
+  github: "https://github.com/your-handle"
+  website: null
+  status: PENDING
+
+desired_salary_numeric:
+  question: "Desired salary (numeric)"
+  answer: 120000   # placeholder
+  status: PENDING
+
+desired_salary_text:
+  question: "Desired salary / compensation expectations (free text)"
+  answer: "Looking for $X+ base, flexible for the right role and total package."
+  status: PENDING
+
+start_date:
+  question: "Earliest start date"
+  answer: "Two weeks after an accepted offer."
+  status: PENDING
+
+referral_source:
+  question: "How did you hear about this position?"
+  answer: "Company careers page"
+  status: PENDING

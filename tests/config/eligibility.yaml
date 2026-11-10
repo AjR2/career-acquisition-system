@@ -1,0 +1,45 @@
+# TEST FIXTURE: frozen copy of the eligibility rules the test suite was written against (DC metro).
+# Do not edit for personal use; edit config/eligibility.yaml instead.
+# The system never edits this file automatically.
+
+candidate:
+  has_active_clearance: false   # A pending background check is NOT a clearance.
+
+compensation:
+  min_base_usd: 140000
+  target_base_usd: 150000
+  hours_per_year: 2080          # for annualizing hourly contract rates (comparison only)
+
+location:
+  remote_ok: true              # false = only roles in your commute area
+  home: "Washington, DC"
+  # Places within reasonable commuting distance of Bethesda.
+  dc_metro: [
+    "washington, dc", "washington dc", "washington, d.c.", "washington d.c.", "district of columbia",
+    "bethesda", "north bethesda", "rockville", "silver spring", "chevy chase", "gaithersburg",
+    "potomac", "kensington", "wheaton", "college park", "hyattsville", "takoma park",
+    "arlington", "alexandria", "mclean", "tysons", "falls church", "vienna, va", "fairfax",
+    "reston", "herndon", "crystal city", "rosslyn", "dc metro", "dmv"
+  ]
+  office_days_high_threshold: 4
+
+roles:
+  # A posting title must match one of these to be considered a software engineering role.
+  engineering_title_patterns: [
+    "\\bengineer\\b", "\\bdeveloper\\b", "\\bswe\\b", "\\bprogrammer\\b", "member of (technical|deployed) staff"
+  ]
+  # Titles matching these are excluded (not IC software engineering, or not a fit by definition).
+  # Part-time, per-diem, and PRN roles: true keeps them (flagged), false rejects them.
+  part_time_ok: false
+  excluded_title_patterns: [
+    "\\bmanager\\b", "\\bdirector\\b", "head of", "\\bvp\\b", "vice president", "\\bintern(ship)?\\b",
+    "sales engineer", "account", "recruit", "hardware", "mechanical", "electrical engineer",
+    "manufacturing", "facilities", "network engineer", "datacenter", "data center", "silicon",
+    "asic", "fpga", "firmware", "robotics", "chip", "physical design", "analog",
+    "developer relations", "developer advocate", "devrel", "analytics engineer", "data engineer",
+    "security engineer", "security software engineer", "offensive security", "information security",
+    "site reliability", "\\bsre\\b", "devops", "network infrastructure", "support engineer",
+    "qa engineer", "test engineer", "quality assurance", "customer success", "chief of staff",
+    "governance", "compliance engineer", "design verification", "systems development engineer",
+    "\\bdesigner\\b", "developer advocate", "program manager", "product manager"
+  ]

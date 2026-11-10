@@ -1,0 +1,30 @@
+CAS: Career Acquisition System
+==============================
+
+CAS watches employers' job boards for you, filters jobs by your rules (pay, location, titles),
+drafts a tailored resume for the best matches using only facts you confirm, and fills in the
+application form. You review everything and click submit yourself. Nothing is sent without you.
+
+You need: a Mac, an internet connection, and an Anthropic API key (CAS walks you through it;
+expect about $1 a week).
+
+TO START
+1. Double-click "Start CAS".
+   - If your Mac says it "cannot be opened" or "cannot verify the developer": click Done/Cancel,
+     open System Settings > Privacy & Security, scroll down, and click "Open Anyway" next to
+     "Start CAS". Then double-click it again. (Older macOS: right-click "Start CAS" > Open.)
+   - If you do not have Node.js yet, CAS opens its download page. Install it, then double-click
+     "Start CAS" again.
+   - The first start installs everything (about 5 minutes).
+2. Your browser opens the "Get started" page. Follow the steps from top to bottom.
+3. Keep the Terminal window open while you use CAS. Close it to stop.
+
+EVERY DAY
+Double-click "Start CAS", open the Queue, and review the jobs CAS prepared. If you turned on
+daily search, CAS searches each morning at 6:30 by itself while your Mac is on.
+
+The starter employer list is 48 healthcare employers that post jobs on job boards CAS can read
+(Greenhouse, Lever, Ashby). Most hospitals and large health systems use other systems (such as
+Workday) that CAS cannot read; search those directly.
+
+More detail: ONBOARDING.md

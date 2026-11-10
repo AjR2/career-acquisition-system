@@ -1,0 +1,437 @@
+{
+ "absolute_url": "https://job-boards.greenhouse.io/vercel/jobs/5430088004",
+ "data_compliance": [
+  {
+   "type": "gdpr",
+   "requires_consent": false,
+   "requires_processing_consent": false,
+   "requires_retention_consent": false,
+   "retention_period": null,
+   "demographic_data_consent_applies": false
+  }
+ ],
+ "internal_job_id": 4870530004,
+ "location": {
+  "name": "Remote - United States"
+ },
+ "metadata": [
+  {
+   "id": 18783104004,
+   "name": "Career Site Categories",
+   "value": "Engineering",
+   "value_type": "single_select"
+  }
+ ],
+ "id": 5430088004,
+ "updated_at": "2026-10-20T15:48:14-04:00",
+ "requisition_id": "751",
+ "title": "Software Engineer, Backend",
+ "pay_input_ranges": [],
+ "company_name": "Vercel",
+ "first_published": "2025-01-28T16:57:19-05:00",
+ "language": "en",
+ "application_deadline": null,
+ "content": "&lt;div class=&quot;content-intro&quot;&gt;&lt;h2&gt;About Vercel:&lt;/h2&gt;\n&lt;p&gt;&lt;span data-sheets-root=&quot;1&quot;&gt;Vercel is the agentic infrastructure company, freeing people and agents to ship what&#39;s next. For more than a decade we&#39;ve helped builders move from idea to production with speed, security, and exceptional developer experience.&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span data-sheets-root=&quot;1&quot;&gt;Now we&#39;re scaling our products for both agents and people to ship and run software, built in the open and trusted by OpenAI, PayPal, Ramp, Supreme, and millions of developers worldwide.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;h2&gt;About the role&lt;/h2&gt;\n&lt;p&gt;We are seeking a Backend leaning Software Engineer. In this role, you will be pivotal in designing, building, and maintaining scalable, high-performance systems. Leveraging JavaScript/TypeScript, Node.js, SQL and NoSQL cloud-native databases, and AWS, you will develop innovative solutions for user, group, and membership management while ensuring the highest levels of security and reliability.&lt;/p&gt;\n&lt;p&gt;If you\u2019re based within a pre-determined commuting distance of one of our offices (SF, NY, London, or Berlin), the role includes in-office anchor days on Monday, Tuesday, and Friday. If you&#39;re located beyond that distance, the role is fully remote. For location-specific details, please connect with our recruiting team.&lt;/p&gt;\n&lt;h2&gt;What you&#39;ll do&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Enable us to deliver secure, reliable, and scalable services that exceed industry standards and customer expectations.&lt;/li&gt;\n&lt;li&gt;Collaborate with cross-functional teams to deliver large-scale projects with cross-team dependencies.&lt;/li&gt;\n&lt;li&gt;Collaborate with peer teams to deliver solutions that meet industry standards and customer expectations.&lt;/li&gt;\n&lt;li&gt;Maintain and operate services at high scale, participating in scheduled on-call rotations to ensure reliability.&lt;/li&gt;\n&lt;li&gt;Implement identity synchronization and lifecycle management solutions using SCIM and other relevant standards.&lt;/li&gt;\n&lt;li&gt;Work with Infrastructure as Code (Terraform, AWS CloudFormation, Kubernetes, etc.) to deliver scalable, high-availability applications.&lt;/li&gt;\n&lt;li&gt;Build and maintain high-quality enterprise software using TypeScript, REST APIs, and JSON.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2&gt;What you need&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Proficiency in TypeScript/JavaScript, React, and Node.js.&lt;/li&gt;\n&lt;li&gt;Strong knowledge of security architecture, LDAP, Active Directory, SAML, SSO, OAuth2, OpenID Connect and web protocols like XML, SOAP, JSON, and REST.&lt;/li&gt;\n&lt;li&gt;Familiarity with access control models such as RBAC, ABAC and ReBAC.&amp;nbsp;&amp;nbsp;&lt;/li&gt;\n&lt;li&gt;Experience with SQL.&lt;/li&gt;\n&lt;li&gt;Practical experience developing and improving applications written in Node.js.&lt;/li&gt;\n&lt;li&gt;Exhibit excellent problem-solving abilities and effective communication skills, especially when collaborating with diverse teams.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2&gt;Benefits &amp;amp; Compensation:&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li data-stringify-indent=&quot;0&quot; data-stringify-border=&quot;0&quot;&gt;Competitive compensation package, including equity.&lt;/li&gt;\n&lt;li data-stringify-indent=&quot;0&quot; data-stringify-border=&quot;0&quot;&gt;Inclusive Healthcare Package.&lt;/li&gt;\n&lt;li data-stringify-indent=&quot;0&quot; data-stringify-border=&quot;0&quot;&gt;Learn and Grow - we provide mentorship and send you to events that help you build your network and skills.&lt;/li&gt;\n&lt;li data-stringify-indent=&quot;0&quot; data-stringify-border=&quot;0&quot;&gt;Flexible Time Off.&lt;/li&gt;\n&lt;li data-stringify-indent=&quot;0&quot; data-stringify-border=&quot;0&quot;&gt;We will provide you the gear you need to do your role, and a WFH budget for you to outfit your space as needed.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;The San Francisco, CA base pay range for this role is $196,000-$294,000. Actual salary will be based on job-related skills, experience, and location. Compensation outside of San Francisco may be adjusted based on employee location. The total compensation package may include benefits, equity-based compensation, and eligibility for a company bonus or variable pay program depending on the role. Your recruiter can share more details during the hiring process.&amp;nbsp;&lt;/p&gt;\n&lt;p class=&quot;p1&quot;&gt;&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;#LI-CL1&lt;/span&gt;&lt;/p&gt;&lt;div class=&quot;content-conclusion&quot;&gt;&lt;h2&gt;&lt;strong&gt;Disclosures:&lt;/strong&gt;&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;Privacy: &lt;/strong&gt;Please review our &lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;a href=&quot;https://vercel.com/legal/job-applicant-privacy-notice&quot;&gt;Job Applicant Privacy Policy&lt;/a&gt;&lt;/span&gt; for more information on how we handle your data.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Equal Opportunity:&amp;nbsp;&lt;/strong&gt;Vercel is committed to fostering and empowering an inclusive community within our organization. We do not discriminate on the basis of race, religion, color, gender expression or identity, sexual orientation, national origin, citizenship, age, marital status, veteran status, disability status, or any other characteristic protected by law. Vercel encourages everyone to apply for our available positions, even if they don&#39;t necessarily check every box on the job description.&lt;/li&gt;\n&lt;/ul&gt;&lt;/div&gt;",
+ "departments": [
+  {
+   "id": 4042495004,
+   "name": "Engineering",
+   "child_ids": [],
+   "parent_id": null
+  }
+ ],
+ "offices": [
+  {
+   "id": 4035428004,
+   "name": "Remote - United States",
+   "location": "San Francisco, California, United States",
+   "child_ids": [],
+   "parent_id": 4014159004
+  }
+ ],
+ "ai_disclaimer": null,
+ "include_ai_disclaimer": null,
+ "ai_opt_out_request_url": "http://app4.greenhouse.io/ai_opt_out_request/job_post/5430088004/ai_opt_out",
+ "compliance": null,
+ "demographic_questions": null,
+ "questions": [
+  {
+   "description": null,
+   "label": "First Name",
+   "required": true,
+   "fields": [
+    {
+     "name": "first_name",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Last Name",
+   "required": true,
+   "fields": [
+    {
+     "name": "last_name",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Email",
+   "required": true,
+   "fields": [
+    {
+     "name": "email",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Phone",
+   "required": true,
+   "fields": [
+    {
+     "name": "phone",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Resume/CV",
+   "required": true,
+   "fields": [
+    {
+     "name": "resume",
+     "type": "input_file",
+     "values": []
+    },
+    {
+     "name": "resume_text",
+     "type": "textarea",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Are you currently based in any of these countries? Please note these are the only countries where we are accepting applications",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_12521589004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "United States",
+       "value": 43951275004
+      },
+      {
+       "label": "Germany",
+       "value": 43951276004
+      },
+      {
+       "label": "United Kingdom",
+       "value": 43951277004
+      },
+      {
+       "label": "Argentina",
+       "value": 52997117004
+      },
+      {
+       "label": "Australia",
+       "value": 43951278004
+      },
+      {
+       "label": "Canada",
+       "value": 43951280004
+      },
+      {
+       "label": "India",
+       "value": 43951281004
+      },
+      {
+       "label": "Japan",
+       "value": 43951282004
+      },
+      {
+       "label": "Other",
+       "value": 43951283004
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": "<p>Please mark '<strong>YES</strong>' if you will require Visa Sponsorship now, or in the future.<br>Mark '<strong>NO</strong>' if you will <strong>NOT</strong> require Visa Sponsorship now, or in the future.</p>",
+   "label": "Will you require Visa Sponsorship now, or in the future?",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_12521590004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "Yes",
+       "value": 1
+      },
+      {
+       "label": "No",
+       "value": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Your authorization to work in the country where you live. Please choose the option that describes your work authorization.\n",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_14151266004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "I am authorized to work in the country due to my nationality",
+       "value": 52683358004
+      },
+      {
+       "label": "I am authorized to work in the country based on a valid work permit and do not need a company to sponsor my visa",
+       "value": 52683360004
+      },
+      {
+       "label": "I am authorized to work in the country based on a valid work permit which needs to be sponsored by the company I work for",
+       "value": 52683362004
+      },
+      {
+       "label": "I am not authorized to work in the country and need visa support",
+       "value": 52683364004
+      },
+      {
+       "label": "Other",
+       "value": 52683367004
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Do you have experience implementing access control models (like OAuth)",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_12550683004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "Yes",
+       "value": 1
+      },
+      {
+       "label": "No",
+       "value": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "LinkedIn Profile",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_12521592004",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Twitter",
+   "required": false,
+   "fields": [
+    {
+     "name": "question_12521593004",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Github",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_12521594004",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Website",
+   "required": false,
+   "fields": [
+    {
+     "name": "question_12521595004",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": "<p><span style=\"font-weight: 400;\">By submitting my application, I acknowledge that I have read and understand Vercel&rsquo;s </span><a href=\"https://vercel.com/legal/job-applicant-privacy-notice\"><span style=\"font-weight: 400;\">Job Applicant Privacy Notice</span></a><span style=\"font-weight: 400;\">.</span><span style=\"font-weight: 400;\">&nbsp;</span></p>",
+   "label": "By submitting my application, I acknowledge that I have read and understand Vercel\u2019s Job Applicant Privacy Notice - https://vercel.com/legal/job-applicant-privacy-notice ",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_12521596004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "Acknowledge/Confirm",
+       "value": 43951284004
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Please double-check all the information provided above. Ensuring accuracy is crucial, as any errors or omissions may impact the review of your application.",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_12521597004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "I have reviewed and confirmed that all the information provided is accurate and complete.",
+       "value": 43951285004
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": "<p>If multiple things played a part, tell us about the very first one.</p>",
+   "label": "Where did you first hear about this role?",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_17702872004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "Events",
+       "value": 79898735004
+      },
+      {
+       "label": "Built In",
+       "value": 79898741004
+      },
+      {
+       "label": "LinkedIn",
+       "value": 79898759004
+      },
+      {
+       "label": "Google Search",
+       "value": 79898769004
+      },
+      {
+       "label": "Advertisements",
+       "value": 79898778004
+      },
+      {
+       "label": "Other job boards",
+       "value": 79898788004
+      },
+      {
+       "label": "LLMs (ChatGPT, etc.)",
+       "value": 79898794004
+      },
+      {
+       "label": "I'm a Vercel customer",
+       "value": 79898801004
+      },
+      {
+       "label": "Referral from a Vercel customer",
+       "value": 79898807004
+      },
+      {
+       "label": "Referral from a Vercel team member",
+       "value": 79898814004
+      },
+      {
+       "label": "Social media (X, Instagram, YouTube, etc.)",
+       "value": 79898821004
+      },
+      {
+       "label": "Other Content (news articles, podcasts, blogs)",
+       "value": 79898829004
+      },
+      {
+       "label": "Developer communities (GitHub, Hacker News, Reddit, etc.)",
+       "value": 79898840004
+      },
+      {
+       "label": "Other",
+       "value": 79898848004
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "location_questions": [
+  {
+   "description": null,
+   "label": "Longitude",
+   "required": true,
+   "fields": [
+    {
+     "name": "longitude",
+     "type": "input_hidden",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Latitude",
+   "required": true,
+   "fields": [
+    {
+     "name": "latitude",
+     "type": "input_hidden",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Location",
+   "required": true,
+   "fields": [
+    {
+     "name": "location",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,729 @@
+{
+ "absolute_url": "https://job-boards.greenhouse.io/vercel/jobs/5179639004",
+ "data_compliance": [
+  {
+   "type": "gdpr",
+   "requires_consent": false,
+   "requires_processing_consent": false,
+   "requires_retention_consent": false,
+   "retention_period": null,
+   "demographic_data_consent_applies": false
+  }
+ ],
+ "internal_job_id": 4697743004,
+ "location": {
+  "name": "Hybrid - San Francisco, New York City"
+ },
+ "metadata": [
+  {
+   "id": 18783104004,
+   "name": "Career Site Categories",
+   "value": "Engineering",
+   "value_type": "single_select"
+  }
+ ],
+ "id": 5179639004,
+ "updated_at": "2026-10-20T15:47:43-04:00",
+ "requisition_id": "573",
+ "title": "Software Engineer, CDN",
+ "pay_input_ranges": [],
+ "company_name": "Vercel",
+ "first_published": "2024-05-28T11:00:05-04:00",
+ "language": "en",
+ "application_deadline": null,
+ "content": "&lt;div class=&quot;content-intro&quot;&gt;&lt;h2&gt;About Vercel:&lt;/h2&gt;\n&lt;p&gt;&lt;span data-sheets-root=&quot;1&quot;&gt;Vercel is the agentic infrastructure company, freeing people and agents to ship what&#39;s next. For more than a decade we&#39;ve helped builders move from idea to production with speed, security, and exceptional developer experience.&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span data-sheets-root=&quot;1&quot;&gt;Now we&#39;re scaling our products for both agents and people to ship and run software, built in the open and trusted by OpenAI, PayPal, Ramp, Supreme, and millions of developers worldwide.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;h2&gt;About the role&lt;/h2&gt;\n&lt;p&gt;Vercel is looking for engineers to help us build functional systems that improve product and customer experience. As a member of the Edge team, you will help to scale and improve our infrastructure, availability and reliability by working with our backend engineers and product team to identify problems, create tooling and automation.&lt;/p&gt;\n&lt;p&gt;Your role will be dynamic - you should be comfortable designing systems, writing code, and debugging systems in production. Our team orchestrates deploying, routing and serving for our customers through capabilities and tooling we maintain that leverage our own and other cloud providers&#39; infrastructure for networking, TLS termination, routing, storage, caching and other novel edge services.&lt;/p&gt;\n&lt;p&gt;If you\u2019re based within a pre-determined commuting distance of one of our offices (SF or NY), the role includes in-office anchor days on Monday, Tuesday, and Friday. If you&#39;re located beyond that distance, the role is fully remote. For location-specific details, please connect with our recruiting team.&lt;/p&gt;\n&lt;h2&gt;What you need&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Intrigued by tackling the complex challenges serving petabytes of data and billions of requests to millions of people&lt;/li&gt;\n&lt;li&gt;A collaborative team player who believes in the power of strong teams to drive significant changes and innovations&lt;/li&gt;\n&lt;li&gt;Have at least 5 years of relevant experience&lt;/li&gt;\n&lt;li&gt;Have deep experience with how to make high performance systems scale in the cloud&lt;/li&gt;\n&lt;li&gt;Want to help protect the Vercel platform and our customers from abuse&lt;/li&gt;\n&lt;li&gt;Are keen to experiment, challenge norms and deliver secure and reliable systems that delight Vercel&#39;s users&lt;/li&gt;\n&lt;li&gt;Are knowledgeable and experienced with web servers, network protocols&lt;/li&gt;\n&lt;li&gt;Comfortable in Golang&lt;/li&gt;\n&lt;li&gt;Familiar with Cloud Services (e.g. AWS, Google Cloud, or others)&lt;/li&gt;\n&lt;li&gt;Experience with Terraform, Kubernetes, Lua, React and Next.js are nice-to-have!&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2&gt;Benefits &amp;amp; Compensation:&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li data-stringify-indent=&quot;0&quot; data-stringify-border=&quot;0&quot;&gt;Competitive compensation package, including equity.&lt;/li&gt;\n&lt;li data-stringify-indent=&quot;0&quot; data-stringify-border=&quot;0&quot;&gt;Inclusive Healthcare Package.&lt;/li&gt;\n&lt;li data-stringify-indent=&quot;0&quot; data-stringify-border=&quot;0&quot;&gt;Learn and Grow - we provide mentorship and send you to events that help you build your network and skills.&lt;/li&gt;\n&lt;li data-stringify-indent=&quot;0&quot; data-stringify-border=&quot;0&quot;&gt;Flexible Time Off.&lt;/li&gt;\n&lt;li data-stringify-indent=&quot;0&quot; data-stringify-border=&quot;0&quot;&gt;We will provide you the gear you need to do your role, and a WFH budget for you to outfit your space as needed.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;The San Francisco, CA base pay range for this role is $196,000-$294,000. Actual salary will be based on job-related skills, experience, and location. Compensation outside of San Francisco may be adjusted based on employee location. The total compensation package may include benefits, equity-based compensation, and eligibility for a company bonus or variable pay program depending on the role. Your recruiter can share more details during the hiring process.&amp;nbsp;&lt;/p&gt;\n&lt;p&gt;&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;#LI-DNI&lt;/span&gt;&lt;/p&gt;&lt;div class=&quot;content-conclusion&quot;&gt;&lt;h2&gt;&lt;strong&gt;Disclosures:&lt;/strong&gt;&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;Privacy: &lt;/strong&gt;Please review our &lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;a href=&quot;https://vercel.com/legal/job-applicant-privacy-notice&quot;&gt;Job Applicant Privacy Policy&lt;/a&gt;&lt;/span&gt; for more information on how we handle your data.&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Equal Opportunity:&amp;nbsp;&lt;/strong&gt;Vercel is committed to fostering and empowering an inclusive community within our organization. We do not discriminate on the basis of race, religion, color, gender expression or identity, sexual orientation, national origin, citizenship, age, marital status, veteran status, disability status, or any other characteristic protected by law. Vercel encourages everyone to apply for our available positions, even if they don&#39;t necessarily check every box on the job description.&lt;/li&gt;\n&lt;/ul&gt;&lt;/div&gt;",
+ "departments": [
+  {
+   "id": 4042495004,
+   "name": "Engineering",
+   "child_ids": [],
+   "parent_id": null
+  }
+ ],
+ "offices": [
+  {
+   "id": 4014159004,
+   "name": "AMER",
+   "location": "Remote - AMER",
+   "child_ids": [
+    4035429004,
+    4035428004,
+    4091066004,
+    4091067004,
+    4091065004
+   ],
+   "parent_id": null
+  }
+ ],
+ "ai_disclaimer": null,
+ "include_ai_disclaimer": null,
+ "ai_opt_out_request_url": "http://app4.greenhouse.io/ai_opt_out_request/job_post/5179639004/ai_opt_out",
+ "compliance": null,
+ "demographic_questions": {
+  "header": "U.S. Standard Demographic Questions",
+  "description": "<p>At Vercel, we value belonging and believe in fostering an environment where a diversity of perspectives can thrive. As part of this commitment, we invite you to voluntarily provide demographic information. Your responses will be used (in aggregate only) to help us better understand the diversity of our applicants and identify areas of improvement in our recruitment and hiring process. Your responses, or decision not to respond, will be kept confidential and will only be used in aggregate form for diversity and inclusion efforts. This information&nbsp;<u>will not</u>&nbsp;be associated with your specific application and&nbsp;<u>will not</u>&nbsp;be disclosed to the hiring team or used in the hiring decision in any way.<br><br>Individuals seeking employment are considered without regard to race, color, religion, national origin, age, sex, marital status, ancestry, physical or mental disability, veteran status, or sexual orientation. Asking the below questions help us comply with federal and state Equal Employment Opportunity/Affirmative Action record keeping, reporting, and other legal requirements.</p>",
+  "questions": [
+   {
+    "id": 4015790004,
+    "label": "How would you describe your gender identity? (mark all that apply)",
+    "required": false,
+    "type": "multi_value_multi_select",
+    "answer_options": [
+     {
+      "id": 4094149004,
+      "label": "Man",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094147004,
+      "label": "Non-binary",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094144004,
+      "label": "Woman",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094143004,
+      "label": "I prefer to self-describe",
+      "free_form": true,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094141004,
+      "label": "I don't wish to answer",
+      "free_form": false,
+      "decline_to_answer": false
+     }
+    ]
+   },
+   {
+    "id": 4015786004,
+    "label": "How would you describe your racial/ethnic background? (mark all that apply)",
+    "required": false,
+    "type": "multi_value_multi_select",
+    "answer_options": [
+     {
+      "id": 4094137004,
+      "label": "Black or of African descent",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094135004,
+      "label": "East Asian",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094133004,
+      "label": "Hispanic, Latinx or of Spanish Origin",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094131004,
+      "label": "Indigenous, American Indian or Alaska Native",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094129004,
+      "label": "Middle Eastern or North African",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094128004,
+      "label": "Native Hawaiian or Pacific Islander",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094125004,
+      "label": "South Asian",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094123004,
+      "label": "Southeast Asian",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094121004,
+      "label": "White or European",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094120004,
+      "label": "I prefer to self-describe",
+      "free_form": true,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094119004,
+      "label": "I don't wish to answer",
+      "free_form": false,
+      "decline_to_answer": false
+     }
+    ]
+   },
+   {
+    "id": 4015785004,
+    "label": "How would you describe your sexual orientation? (mark all that apply)",
+    "required": false,
+    "type": "multi_value_multi_select",
+    "answer_options": [
+     {
+      "id": 4094117004,
+      "label": "Asexual",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094115004,
+      "label": "Bisexual and/or pansexual",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094113004,
+      "label": "Gay",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094111004,
+      "label": "Heterosexual",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094110004,
+      "label": "Lesbian",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094109004,
+      "label": "Queer",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094108004,
+      "label": "I prefer to self-describe",
+      "free_form": true,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094107004,
+      "label": "I don't wish to answer",
+      "free_form": false,
+      "decline_to_answer": false
+     }
+    ]
+   },
+   {
+    "id": 4015783004,
+    "label": "Do you identify as transgender?",
+    "required": false,
+    "type": "multi_value_single_select",
+    "answer_options": [
+     {
+      "id": 4094104004,
+      "label": "Yes",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094102004,
+      "label": "No",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094099004,
+      "label": "I prefer to self-describe",
+      "free_form": true,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094097004,
+      "label": "I don't wish to answer",
+      "free_form": false,
+      "decline_to_answer": false
+     }
+    ]
+   },
+   {
+    "id": 4015781004,
+    "label": "Do you have a disability or chronic condition (physical, visual, auditory, cognitive, mental, emotional, or other) that substantially limits one or more of your major life activities, including mobility, communication (seeing, hearing, speaking), and learning?",
+    "required": false,
+    "type": "multi_value_single_select",
+    "answer_options": [
+     {
+      "id": 4094093004,
+      "label": "Yes",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094090004,
+      "label": "No",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094088004,
+      "label": "I prefer to self-describe",
+      "free_form": true,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094087004,
+      "label": "I don't wish to answer",
+      "free_form": false,
+      "decline_to_answer": false
+     }
+    ]
+   },
+   {
+    "id": 4015780004,
+    "label": "Are you a veteran or active member of the United States Armed Forces?",
+    "required": false,
+    "type": "multi_value_single_select",
+    "answer_options": [
+     {
+      "id": 4094083004,
+      "label": "Yes, I am a veteran or active member",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094081004,
+      "label": "No, I am not a veteran or active member",
+      "free_form": false,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094079004,
+      "label": "I prefer to self-describe",
+      "free_form": true,
+      "decline_to_answer": false
+     },
+     {
+      "id": 4094077004,
+      "label": "I don't wish to answer",
+      "free_form": false,
+      "decline_to_answer": false
+     }
+    ]
+   }
+  ]
+ },
+ "questions": [
+  {
+   "description": null,
+   "label": "First Name",
+   "required": true,
+   "fields": [
+    {
+     "name": "first_name",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Last Name",
+   "required": true,
+   "fields": [
+    {
+     "name": "last_name",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Email",
+   "required": true,
+   "fields": [
+    {
+     "name": "email",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Phone",
+   "required": true,
+   "fields": [
+    {
+     "name": "phone",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Resume/CV",
+   "required": false,
+   "fields": [
+    {
+     "name": "resume",
+     "type": "input_file",
+     "values": []
+    },
+    {
+     "name": "resume_text",
+     "type": "textarea",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Cover Letter",
+   "required": false,
+   "fields": [
+    {
+     "name": "cover_letter",
+     "type": "input_file",
+     "values": []
+    },
+    {
+     "name": "cover_letter_text",
+     "type": "textarea",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Are you currently based in any of these countries? Please note these are the only countries where we are accepting applications",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_10994374004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "United States",
+       "value": 36670743004
+      },
+      {
+       "label": "Germany",
+       "value": 36670744004
+      },
+      {
+       "label": "United Kingdom",
+       "value": 36670745004
+      },
+      {
+       "label": "Argentina",
+       "value": 52996931004
+      },
+      {
+       "label": "Australia",
+       "value": 36670746004
+      },
+      {
+       "label": "Canada",
+       "value": 36670748004
+      },
+      {
+       "label": "India",
+       "value": 36670749004
+      },
+      {
+       "label": "Japan",
+       "value": 36670750004
+      },
+      {
+       "label": "Other",
+       "value": 36670751004
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": "<p>Please mark '<strong>YES</strong>' if you will require Visa Sponsorship now, or in the future.<br>Mark '<strong>NO</strong>' if you will <strong>NOT</strong> require Visa Sponsorship now, or in the future.</p>",
+   "label": "Will you require Visa Sponsorship now, or in the future?",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_10994375004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "Yes",
+       "value": 1
+      },
+      {
+       "label": "No",
+       "value": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Your authorization to work in the country where you live. Please choose the option that describes your work authorization.\n",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_14151240004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "I am authorized to work in the country due to my nationality",
+       "value": 52683228004
+      },
+      {
+       "label": "I am authorized to work in the country based on a valid work permit and do not need a company to sponsor my visa",
+       "value": 52683229004
+      },
+      {
+       "label": "I am authorized to work in the country based on a valid work permit which needs to be sponsored by the company I work for",
+       "value": 52683231004
+      },
+      {
+       "label": "I am not authorized to work in the country and need visa support",
+       "value": 52683233004
+      },
+      {
+       "label": "Other",
+       "value": 52683236004
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": "<p>Please mark &lsquo;<strong>YES</strong>&rsquo; if you <span style=\"text-decoration: underline;\">currently live</span> in one of these states.<br>If you do <strong>NOT</strong> currently live in one of these states, mark &lsquo;<strong>NO</strong>.&rsquo;</p>",
+   "label": "Do you live in one of the following states?\nAlabama, Alaska, Delaware, Kansas, Maine, Mississippi, Montana, Nebraska, New Mexico, North Dakota, South Dakota, West Virginia, or Wyoming.",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_10994376004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "Yes",
+       "value": 1
+      },
+      {
+       "label": "No",
+       "value": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "LinkedIn Profile",
+   "required": false,
+   "fields": [
+    {
+     "name": "question_10994380004",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Twitter",
+   "required": false,
+   "fields": [
+    {
+     "name": "question_10994381004",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Github",
+   "required": false,
+   "fields": [
+    {
+     "name": "question_10994382004",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Website",
+   "required": false,
+   "fields": [
+    {
+     "name": "question_10994383004",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": "<p><span style=\"font-weight: 400;\">By submitting my application, I acknowledge that I have read and understand Vercel&rsquo;s </span><a href=\"https://vercel.com/legal/job-applicant-privacy-notice\"><span style=\"font-weight: 400;\">Job Applicant Privacy Notice</span></a><span style=\"font-weight: 400;\">.</span><span style=\"font-weight: 400;\">&nbsp;</span></p>",
+   "label": "By submitting my application, I acknowledge that I have read and understand Vercel\u2019s Job Applicant Privacy Notice - https://vercel.com/legal/job-applicant-privacy-notice ",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_10994386004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "Acknowledge/Confirm",
+       "value": 36670761004
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Please double-check all the information provided above. Ensuring accuracy is crucial, as any errors or omissions may impact the review of your application.",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_12248439004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "I have reviewed and confirmed that all the information provided is accurate and complete.",
+       "value": 42363303004
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": "<p>If multiple things played a part, tell us about the very first one.</p>",
+   "label": "Where did you first hear about this role?",
+   "required": true,
+   "fields": [
+    {
+     "name": "question_17702689004",
+     "type": "multi_value_single_select",
+     "values": [
+      {
+       "label": "Events",
+       "value": 79896206004
+      },
+      {
+       "label": "Built In",
+       "value": 79896213004
+      },
+      {
+       "label": "LinkedIn",
+       "value": 79896220004
+      },
+      {
+       "label": "Google Search",
+       "value": 79896226004
+      },
+      {
+       "label": "Advertisements",
+       "value": 79896231004
+      },
+      {
+       "label": "Other job boards",
+       "value": 79896233004
+      },
+      {
+       "label": "LLMs (ChatGPT, etc.)",
+       "value": 79896234004
+      },
+      {
+       "label": "I'm a Vercel customer",
+       "value": 79896239004
+      },
+      {
+       "label": "Referral from a Vercel customer",
+       "value": 79896246004
+      },
+      {
+       "label": "Referral from a Vercel team member",
+       "value": 79896254004
+      },
+      {
+       "label": "Social media (X, Instagram, YouTube, etc.)",
+       "value": 79896268004
+      },
+      {
+       "label": "Other Content (news articles, podcasts, blogs)",
+       "value": 79896282004
+      },
+      {
+       "label": "Developer communities (GitHub, Hacker News, Reddit, etc.)",
+       "value": 79896287004
+      },
+      {
+       "label": "Other",
+       "value": 79896293004
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "location_questions": [
+  {
+   "description": null,
+   "label": "Longitude",
+   "required": true,
+   "fields": [
+    {
+     "name": "longitude",
+     "type": "input_hidden",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Latitude",
+   "required": true,
+   "fields": [
+    {
+     "name": "latitude",
+     "type": "input_hidden",
+     "values": []
+    }
+   ]
+  },
+  {
+   "description": null,
+   "label": "Location",
+   "required": true,
+   "fields": [
+    {
+     "name": "location",
+     "type": "input_text",
+     "values": []
+    }
+   ]
+  }
+ ]
+}

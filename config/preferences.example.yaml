@@ -1,0 +1,32 @@
+# Ranking preferences (soft signals for suitability, never hard eligibility rules). EDIT for your own taste.
+# Start with these examples, then add patterns for roles you keep rejecting.
+# Each entry records where it came from. The system never edits this file automatically.
+
+# Work the user said is not what they want (case-insensitive regex). `scope` is where to look:
+# "title" or "title_and_responsibilities" (title, or at least two responsibilities). A match caps the
+# role's focus fit at `fit`.
+deprioritized_work:
+  - label: design systems / frontend component platform
+    pattern: "design system|component library|frontend platform|design tokens|storybook"
+    scope: title_and_responsibilities
+    fit: 0.3
+    source: "example; replace with why you deprioritize this"
+  - label: pre-sales / solutions engineering
+    pattern: "pre-?sales|sales engineer|solutions engineer|solutions architect|customer engineer"
+    scope: title
+    fit: 0.45
+    source: "example; replace with why you deprioritize this"
+  - label: research-centered role
+    pattern: "research scientist|research engineer|\\bscientist\\b"
+    scope: title
+    fit: 0.15
+    source: "example; replace with why you deprioritize this"
+
+# Target titles from spec section 3. A title match adds to career development (capped at 1.0).
+target_titles:
+  primary:
+    bonus: 0.15
+    pattern: "ai[- ]native|agentic|full[- ]?stack|product engineer|ai engineer|applied ai|ai systems engineer|software engineer,? ai|ai product"
+  secondary:
+    bonus: 0.05
+    pattern: "forward[- ]deployed|agent platform|ai solutions"

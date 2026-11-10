@@ -1,0 +1,44 @@
+# Deterministic banned-phrase linter (spec section 6). Case-insensitive, matched on word boundaries.
+# The system never edits this list automatically.
+phrases:
+  - thrilled to apply
+  - thrilled to
+  - excited to apply
+  - I am excited to
+  - passionate about
+  - passion for
+  - leverage
+  - leveraging
+  - perfect fit
+  - ideal candidate
+  - unique skill set
+  - unique blend
+  - cutting-edge
+  - cutting edge
+  - state-of-the-art
+  - fast-paced environment
+  - synergy
+  - rockstar
+  - ninja
+  - guru
+  - I just wanted to
+  - any insights would be greatly appreciated
+  - delve
+  - tapestry
+  - spearheaded
+  - results-driven
+  - detail-oriented
+  - team player
+  - go-getter
+  - hit the ground running
+  - wear many hats
+  - game-changer
+  - game changer
+  - in today's fast-paced
+  - I believe I would be a great
+  - I am confident that
+  - look no further
+# Characters banned outright (user rule: no em dashes; "--" is the ASCII stand-in).
+characters:
+  - "—"
+  - "--"
