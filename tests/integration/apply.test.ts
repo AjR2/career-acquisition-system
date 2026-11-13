@@ -283,6 +283,33 @@ describe("approval UI security", () => {
   });
 });
 
+describe("submit route (regression: incident 2026-11-13)", () => {
+  it("shows an authorization refusal on the page and starts nothing", async () => {
+    const db = testDb();
+    const id = seed(db);
+    approve(db, id, ctx(), { "Why Acme?": "x" });
+    // Refusal cause: a submission already exists for this role (idempotency key).
+    const dedupe = (db.prepare("SELECT dedupe_hash FROM postings WHERE id = ?").get(id) as { dedupe_hash: string }).dedupe_hash;
+    const did = (db.prepare("SELECT id FROM decisions WHERE posting_id = ? AND decision = 'approve'").get(id) as { id: number }).id;
+    db.prepare("INSERT INTO submissions (posting_id, decision_id, idempotency_key, material_hash, status) VALUES (?, ?, ?, 'x', 'submitted')").run(id, did, dedupe);
+    const probe = startServer({ db, ctx }, 0);
+    await new Promise((r) => probe.server.once("listening", r));
+    const port = (probe.server.address() as AddressInfo).port;
+    probe.server.close();
+    const s = startServer({ db, ctx }, port);
+    await new Promise((r) => s.server.once("listening", r));
+    try {
+      const r = await fetch(`http://127.0.0.1:${port}/p/${id}/submit`, { method: "POST", body: new URLSearchParams({ csrf: s.token }), redirect: "manual" });
+      expect(r.status).toBe(400);
+      expect(await r.text()).toMatch(/already submitted for this role/);
+      expect(db.prepare("SELECT state FROM postings WHERE id = ?").get(id)).toEqual({ state: "APPROVED" });
+      expect(db.prepare("SELECT count(*) n FROM submissions WHERE posting_id = ?").get(id)).toEqual({ n: 1 });
+    } finally {
+      s.server.close();
+    }
+  });
+});
+
 describe("approval UI in a real browser (regression: incident 2026-10-22)", () => {
   it("approving through the actual form works: the browser's Origin header is accepted", async () => {
     const { chromium } = await import("playwright");

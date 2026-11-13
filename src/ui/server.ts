@@ -6,7 +6,7 @@ import { PROJECT_ROOT } from "../config/env.js";
 import type { DB } from "../db/index.js";
 import { approve, defer, DecisionError, latestValidated, planFor, reject, release, requestRevision, resolveUncertain, updateStatus, type DecisionContext } from "../apply/decide.js";
 import { resumeHtml } from "../apply/pdf.js";
-import { assistedSubmit, AuthorizationError } from "../apply/submit.js";
+import { assistedSubmit, AuthorizationError, authorize } from "../apply/submit.js";
 import type { EligibilityResult } from "../eligibility/rules.js";
 import type { Suitability } from "../suitability/score.js";
 import type { ResumeDraft } from "../drafting/schemas.js";
@@ -244,13 +244,15 @@ export function startServer(deps: UiDeps, port: number, host = "127.0.0.1") {
         else if (action === "status") updateStatus(db, id, (f.get("to") ?? "") as State, f.get("note") ?? undefined);
         else if (action === "submit") {
           if (running.has(id)) return redirect(res, `/p/${id}`);
+          // Check the gate here, synchronously, so a refusal throws into the catch below and is shown
+          // on the page (incident 2026-11-13: refusals inside the background task were only logged).
+          // assistedSubmit checks it again before anything is opened.
+          authorize(db, id, deps.ctx());
           running.add(id);
           assistedSubmit(db, id, deps.ctx(), deps.submitOptions)
             .then((r) => log.info({ id, status: r.status }, "assisted submission finished"))
             .catch((e) => log.warn({ id, err: (e as Error).message }, "assisted submission refused"))
             .finally(() => running.delete(id));
-          // Give authorization a moment to fail fast so refusals show up on the page.
-          await new Promise((r) => setTimeout(r, 300));
         }
       } catch (e) {
         if (e instanceof DecisionError || e instanceof AuthorizationError) return send(res, 400, detail(id, `<div class="card bad">${esc(e.message)}</div>`));
