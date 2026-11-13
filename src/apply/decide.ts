@@ -151,7 +151,24 @@ export function resolveUncertain(db: DB, postingId: number, outcome: "submitted"
   })();
 }
 
-const MANUAL_STATUS: State[] = ["RECRUITER_RESPONSE", "INTERVIEW_REQUESTED", "INTERVIEWING", "REJECTED", "OFFER", "WITHDRAWN", "CLOSED"];
+/**
+ * Withdraws an approval: APPROVED or SUBMISSION_UNCERTAIN -> USER_REJECTED. User-only. From
+ * SUBMISSION_UNCERTAIN the user must confirm the application was not sent; the uncertain submission
+ * record is then removed, as for "It was not sent". If it was sent, resolve it as submitted instead.
+ */
+export function withdrawApproval(db: DB, postingId: number, opts: { confirmedNotSent?: boolean; note?: string } = {}) {
+  const s = state(db, postingId);
+  if (s !== "APPROVED" && s !== "SUBMISSION_UNCERTAIN") throw new DecisionError(`only approved or uncertain items can be withdrawn (this one is ${s})`);
+  if (s === "SUBMISSION_UNCERTAIN" && !opts.confirmedNotSent) throw new DecisionError("confirm the application was not sent before withdrawing; if it was sent, resolve it as submitted");
+  const note = `withdrew approval${s === "SUBMISSION_UNCERTAIN" ? " (user confirmed not sent)" : ""}${opts.note?.trim() ? `: ${opts.note.trim()}` : ""}`;
+  db.transaction(() => {
+    record(db, { postingId, decision: "reject", note });
+    if (s === "SUBMISSION_UNCERTAIN") db.prepare("DELETE FROM submissions WHERE posting_id = ? AND status = 'uncertain'").run(postingId);
+    transition(db, postingId, "USER_REJECTED", "user", { note, withdrawnFrom: s });
+  })();
+}
+
+const MANUAL_STATUS: State[] =["RECRUITER_RESPONSE", "INTERVIEW_REQUESTED", "INTERVIEWING", "REJECTED", "OFFER", "WITHDRAWN", "CLOSED"];
 
 /** Tier 1: post-submission states are set by the user from the Pipeline view. */
 export function updateStatus(db: DB, postingId: number, to: State, note?: string) {

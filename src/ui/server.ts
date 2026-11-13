@@ -4,7 +4,7 @@ import { readdirSync, readFileSync, existsSync } from "node:fs";
 import path from "node:path";
 import { PROJECT_ROOT } from "../config/env.js";
 import type { DB } from "../db/index.js";
-import { approve, defer, DecisionError, latestValidated, planFor, reject, release, requestRevision, resolveUncertain, updateStatus, type DecisionContext } from "../apply/decide.js";
+import { approve, defer, DecisionError, latestValidated, planFor, reject, release, requestRevision, resolveUncertain, updateStatus, withdrawApproval, type DecisionContext } from "../apply/decide.js";
 import { resumeHtml } from "../apply/pdf.js";
 import { assistedSubmit, AuthorizationError, authorize } from "../apply/submit.js";
 import type { EligibilityResult } from "../eligibility/rules.js";
@@ -134,11 +134,16 @@ export function startServer(deps: UiDeps, port: number, host = "127.0.0.1") {
     if (state === "APPROVED") {
       actions.push(`<div class="card"><h3>Ready to apply</h3><p>CAS will open <b>${esc(p.company_name)}</b>'s form in a visible browser, fill approved fields, and upload the resume. It stops before submit, attestations, CAPTCHAs, and demographic questions.</p>
         ${running.has(id) ? `<p class="warn">Browser is open. Review the form and click submit there.</p>` : form(`/p/${id}/submit`, "", "Open application in browser", "primary")}</div>`);
+      if (!running.has(id))
+        actions.push(`<div class="card"><h3>Withdraw approval</h3><p class="muted">Rejects this posting without applying. Nothing is sent to the employer.</p>
+        ${form(`/p/${id}/withdraw`, `<input type="text" name="note" placeholder="Reason (optional, recorded)">`, "Withdraw approval")}</div>`);
     }
     if (state === "SUBMISSION_UNCERTAIN") {
       actions.push(`<div class="card"><h3>Submission uncertain</h3><p>No confirmation page was detected. Check your email or the employer site.</p>
         ${form(`/p/${id}/resolve`, `<input type="hidden" name="outcome" value="submitted"><textarea name="evidence" rows="3" placeholder="Paste the confirmation email or page text" required></textarea>`, "It was submitted")}
         ${form(`/p/${id}/resolve`, `<input type="hidden" name="outcome" value="not_sent"><input type="hidden" name="evidence" value="user says not sent">`, "It was not sent")}</div>`);
+      actions.push(`<div class="card"><h3>Withdraw approval</h3><p class="muted">Only if the application was <b>not</b> sent: rejects this posting instead of trying again. If it was sent, use "It was submitted" above.</p>
+        ${form(`/p/${id}/withdraw`, `<label><input type="checkbox" name="confirm_not_sent" value="yes" required> I confirm this application was not sent</label> <input type="text" name="note" placeholder="Reason (optional, recorded)">`, "Withdraw approval")}</div>`);
     }
 
     const sub = db.prepare("SELECT status, filled_json, confirmation_json, evidence_path FROM submissions WHERE posting_id = ? ORDER BY id DESC LIMIT 1").get(id) as
@@ -229,7 +234,7 @@ export function startServer(deps: UiDeps, port: number, host = "127.0.0.1") {
         const r = await setup.post(url.pathname, f);
         if (r) return "redirect" in r ? redirect(res, r.redirect) : send(res, r.code ?? 200, r.html);
       }
-      const m = url.pathname.match(/^\/p\/(\d+)\/(approve|reject|defer|revise|release|submit|resolve|status)$/);
+      const m = url.pathname.match(/^\/p\/(\d+)\/(approve|reject|defer|revise|release|submit|resolve|status|withdraw)$/);
       if (!m) return send(res, 404, "not found");
       const id = Number(m[1]);
       const action = m[2];
@@ -241,7 +246,10 @@ export function startServer(deps: UiDeps, port: number, host = "127.0.0.1") {
         else if (action === "revise") requestRevision(db, id, f.get("note") ?? "");
         else if (action === "release") release(db, id, f.get("note") ?? "");
         else if (action === "resolve") resolveUncertain(db, id, f.get("outcome") === "submitted" ? "submitted" : "not_sent", f.get("evidence") ?? "");
-        else if (action === "status") updateStatus(db, id, (f.get("to") ?? "") as State, f.get("note") ?? undefined);
+        else if (action === "withdraw") {
+          if (running.has(id)) throw new DecisionError("the application browser is open; close it first");
+          withdrawApproval(db, id, { confirmedNotSent: f.get("confirm_not_sent") === "yes", note: f.get("note") ?? undefined });
+        } else if (action === "status") updateStatus(db, id, (f.get("to") ?? "") as State, f.get("note") ?? undefined);
         else if (action === "submit") {
           if (running.has(id)) return redirect(res, `/p/${id}`);
           // Check the gate here, synchronously, so a refusal throws into the catch below and is shown

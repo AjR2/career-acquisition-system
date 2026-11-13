@@ -38,6 +38,16 @@ describe("state machine", () => {
     expect(canTransition("SUBMISSION_UNCERTAIN", "SUBMITTED", "user")).toBe(true);
   });
 
+  it("withdrawing an approval (APPROVED or SUBMISSION_UNCERTAIN -> USER_REJECTED) is user-only", () => {
+    for (const from of ["APPROVED", "SUBMISSION_UNCERTAIN"] as const) {
+      expect(canTransition(from, "USER_REJECTED", "system")).toBe(false);
+      expect(canTransition(from, "USER_REJECTED", "user")).toBe(true);
+    }
+    // Once anything may have reached the employer, it cannot be withdrawn as a rejection.
+    expect(canTransition("SUBMITTING", "USER_REJECTED", "user")).toBe(false);
+    expect(canTransition("SUBMITTED", "USER_REJECTED", "user")).toBe(false);
+  });
+
   it("USER_REJECTED and REJECTED are distinct states", () => {
     expect(STATES).toContain("USER_REJECTED");
     expect(STATES).toContain("REJECTED");

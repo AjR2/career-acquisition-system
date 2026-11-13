@@ -31,12 +31,13 @@ const T: Record<State, readonly State[]> = {
   NEEDS_ATTENTION: ["DRAFTING", "READY_FOR_REVIEW", "USER_REJECTED", "DEFERRED", "QUALIFIED", "ELIGIBILITY_PENDING"],
   READY_FOR_REVIEW: ["APPROVED", "USER_REJECTED", "DEFERRED", "DRAFTING"],
   DEFERRED: ["READY_FOR_REVIEW", "USER_REJECTED", "QUALIFIED"],
-  // Approval can be withdrawn by the user before submission starts.
-  APPROVED: ["SUBMITTING", "READY_FOR_REVIEW"],
+  // Approval can be withdrawn by the user before submission starts: back to review, or rejected outright.
+  APPROVED: ["SUBMITTING", "READY_FOR_REVIEW", "USER_REJECTED"],
   // An interrupted submission is never retried automatically: it lands in SUBMISSION_UNCERTAIN.
   SUBMITTING: ["SUBMITTED", "SUBMISSION_UNCERTAIN"],
-  // Resolved only by the user: with confirmation evidence (SUBMITTED) or a statement it was not sent (APPROVED).
-  SUBMISSION_UNCERTAIN: ["SUBMITTED", "APPROVED"],
+  // Resolved only by the user: with confirmation evidence (SUBMITTED), or a statement it was not sent
+  // (APPROVED to try again, or USER_REJECTED to withdraw the approval).
+  SUBMISSION_UNCERTAIN: ["SUBMITTED", "APPROVED", "USER_REJECTED"],
   SUBMITTED: ["RECRUITER_RESPONSE", "INTERVIEW_REQUESTED", "REJECTED", "WITHDRAWN", "CLOSED"],
   RECRUITER_RESPONSE: ["INTERVIEW_REQUESTED", "REJECTED", "WITHDRAWN", "CLOSED"],
   INTERVIEW_REQUESTED: ["INTERVIEWING", "REJECTED", "WITHDRAWN"],
@@ -51,8 +52,8 @@ const T: Record<State, readonly State[]> = {
 /** Transitions that only the user may make (never the system). */
 const USER_ONLY = new Set<string>([
   "READY_FOR_REVIEW>APPROVED", "READY_FOR_REVIEW>USER_REJECTED", "READY_FOR_REVIEW>DEFERRED",
-  "SUBMISSION_UNCERTAIN>SUBMITTED", "SUBMISSION_UNCERTAIN>APPROVED",
-  "APPROVED>READY_FOR_REVIEW",
+  "SUBMISSION_UNCERTAIN>SUBMITTED", "SUBMISSION_UNCERTAIN>APPROVED", "SUBMISSION_UNCERTAIN>USER_REJECTED",
+  "APPROVED>READY_FOR_REVIEW", "APPROVED>USER_REJECTED",
   // NEEDS_ATTENTION holds (employer AI policy, failed validation, unsupported questions) are
   // released only by the user. The system may only re-run eligibility, close a removed listing, or
   // reject a hold scored below drafting.min_suitability (decision 0005, via dropBelowScoreFloor).

@@ -4,7 +4,7 @@ import os from "node:os";
 import path from "node:path";
 import type { AddressInfo } from "node:net";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { approve, DecisionError, reject, release, resolveUncertain, type DecisionContext } from "../../src/apply/decide.js";
+import { approve, DecisionError, reject, release, resolveUncertain, withdrawApproval, type DecisionContext } from "../../src/apply/decide.js";
 import { buildPlan } from "../../src/apply/plan.js";
 import { assistedSubmit, AuthorizationError, authorize } from "../../src/apply/submit.js";
 import type { ResumeDraft } from "../../src/drafting/schemas.js";
@@ -304,6 +304,71 @@ describe("submit route (regression: incident 2026-11-13)", () => {
       expect(await r.text()).toMatch(/already submitted for this role/);
       expect(db.prepare("SELECT state FROM postings WHERE id = ?").get(id)).toEqual({ state: "APPROVED" });
       expect(db.prepare("SELECT count(*) n FROM submissions WHERE posting_id = ?").get(id)).toEqual({ n: 1 });
+    } finally {
+      s.server.close();
+    }
+  });
+});
+
+describe("withdraw approval (incident 2026-11-13-no-withdraw-approval)", () => {
+  const stateOf = (db: ReturnType<typeof testDb>, id: number) => (db.prepare("SELECT state FROM postings WHERE id = ?").get(id) as { state: string }).state;
+  function uncertain(db: ReturnType<typeof testDb>) {
+    const id = seed(db);
+    approve(db, id, ctx(), { "Why Acme?": "x" });
+    const did = (db.prepare("SELECT id FROM decisions WHERE posting_id = ? AND decision = 'approve'").get(id) as { id: number }).id;
+    const dedupe = (db.prepare("SELECT dedupe_hash FROM postings WHERE id = ?").get(id) as { dedupe_hash: string }).dedupe_hash;
+    db.prepare("INSERT INTO submissions (posting_id, decision_id, idempotency_key, material_hash, status) VALUES (?, ?, ?, 'x', 'uncertain')").run(id, did, dedupe);
+    db.prepare("UPDATE postings SET state = 'SUBMISSION_UNCERTAIN' WHERE id = ?").run(id);
+    return id;
+  }
+
+  it("APPROVED -> USER_REJECTED, recorded as the user's decision", () => {
+    const db = testDb();
+    const id = seed(db);
+    approve(db, id, ctx(), { "Why Acme?": "x" });
+    withdrawApproval(db, id, { note: "not a fit after all" });
+    expect(stateOf(db, id)).toBe("USER_REJECTED");
+    const ev = db.prepare("SELECT actor, detail_json FROM events WHERE posting_id = ? AND to_state = 'USER_REJECTED'").get(id) as { actor: string; detail_json: string };
+    expect(ev.actor).toBe("user");
+    expect(JSON.parse(ev.detail_json)).toMatchObject({ withdrawnFrom: "APPROVED", note: "withdrew approval: not a fit after all" });
+  });
+
+  it("SUBMISSION_UNCERTAIN needs an explicit not-sent confirmation, then clears the uncertain submission", () => {
+    const db = testDb();
+    const id = uncertain(db);
+    expect(() => withdrawApproval(db, id)).toThrow(DecisionError);
+    expect(stateOf(db, id)).toBe("SUBMISSION_UNCERTAIN");
+    withdrawApproval(db, id, { confirmedNotSent: true });
+    expect(stateOf(db, id)).toBe("USER_REJECTED");
+    expect(db.prepare("SELECT count(*) n FROM submissions WHERE posting_id = ?").get(id)).toEqual({ n: 0 });
+  });
+
+  it("refuses other states", () => {
+    const db = testDb();
+    const id = seed(db);
+    expect(() => withdrawApproval(db, id)).toThrow(/only approved or uncertain/);
+  });
+
+  it("works from the item page: the uncertain form needs the confirmation box", async () => {
+    const db = testDb();
+    const id = uncertain(db);
+    const probe = startServer({ db, ctx }, 0);
+    await new Promise((r) => probe.server.once("listening", r));
+    const port = (probe.server.address() as AddressInfo).port;
+    probe.server.close();
+    const s = startServer({ db, ctx }, port);
+    await new Promise((r) => s.server.once("listening", r));
+    const url = `http://127.0.0.1:${port}`;
+    try {
+      const html = await (await fetch(`${url}/p/${id}`)).text();
+      expect(html).toContain(`/p/${id}/withdraw`);
+      expect(html).toContain('name="confirm_not_sent"');
+      const noConfirm = await fetch(`${url}/p/${id}/withdraw`, { method: "POST", body: new URLSearchParams({ csrf: s.token }), redirect: "manual" });
+      expect(noConfirm.status).toBe(400);
+      expect(stateOf(db, id)).toBe("SUBMISSION_UNCERTAIN");
+      const ok = await fetch(`${url}/p/${id}/withdraw`, { method: "POST", body: new URLSearchParams({ csrf: s.token, confirm_not_sent: "yes" }), redirect: "manual" });
+      expect(ok.status).toBe(303);
+      expect(stateOf(db, id)).toBe("USER_REJECTED");
     } finally {
       s.server.close();
     }
